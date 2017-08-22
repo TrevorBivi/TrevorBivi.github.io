@@ -63,11 +63,11 @@
 					</td>
 					<td width=125 style="vertical-align:top;">
 						<div style="position:fixed;">
-							<a id="navButton" onmouseover="navButtonExpand(this)">&nbsp[ Home&nbsp&nbsp&nbsp&nbsp&nbsp]&nbsp</a><br>
-							<a id="navButton" onmouseover="navButtonExpand(this)">&nbsp[ Profile&nbsp&nbsp]&nbsp</a><br>
-							<a id="navButton" onmouseover="navButtonExpand(this)">&nbsp[ Projects&nbsp]&nbsp</a><br>
-							<a id="navButton" onmouseover="navButtonExpand(this)">&nbsp[ About me&nbsp]&nbsp</a><br>
-							<a id="navButton" onmouseover="navButtonExpand(this)">&nbsp[ Email&nbsp&nbsp&nbsp&nbsp]&nbsp</a><br>
+							<a id="navButton" onmouseover="navButtonExpand(this) onmouseleave ="navButtonContract(this)">&nbsp[ Home&nbsp&nbsp&nbsp&nbsp&nbsp]&nbsp</a><br>
+							<a id="navButton" onmouseover="navButtonExpand(this) onmouseleave ="navButtonContract(this)">&nbsp[ Profile&nbsp&nbsp]&nbsp</a><br>
+							<a id="navButton" onmouseover="navButtonExpand(this) onmouseleave ="navButtonContract(this)">&nbsp[ Projects&nbsp]&nbsp</a><br>
+							<a id="navButton" onmouseover="navButtonExpand(this) onmouseleave ="navButtonContract(this)">&nbsp[ About me&nbsp]&nbsp</a><br>
+							<a id="navButton" onmouseover="navButtonExpand(this) onmouseleave ="navButtonContract(this)">&nbsp[ Email&nbsp&nbsp&nbsp&nbsp]&nbsp</a><br>
 						</div>
 					</td>
 				</tr>
@@ -78,9 +78,9 @@
 
 <script>
 	function navButtonExpand(x){
-		x.textContent = "[ ".concat(x.textContent.substring(2,11)).concat(" ");
+		x.textContent = "[ ".concat(x.textContent.substring(2,11)).concat(" ]");
 	}
 	function navButtonContract(x){
-		x.textContent = "[ ".concat(x.textContent.substring(2,11)).concat(" ");
+		x.textContent = " [".concat(x.textContent.substring(2,11)).concat("] ");
 	}
 </script>
