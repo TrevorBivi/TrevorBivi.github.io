@@ -63,11 +63,11 @@
 					</td>
 					<td width=150 style="vertical-align:top;">
 						<div style="position:fixed;">
-							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)">&nbsp[ Home&nbsp&nbsp&nbsp&nbsp&nbsp]&nbsp</a><br>
-							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)">&nbsp[ Profile&nbsp&nbsp]&nbsp</a><br>
-							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)">&nbsp[ Projects&nbsp]&nbsp</a><br>
-							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)">&nbsp[ About me&nbsp]&nbsp</a><br>
-							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)">&nbsp[ Email&nbsp&nbsp&nbsp&nbsp]&nbsp</a><br>
+							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)">x[&nbspHome&nbsp&nbsp&nbsp&nbsp&nbsp]x</a><br>
+							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)">x[&nbspProfile&nbsp&nbsp]x</a><br>
+							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)">x[&nbspProjects&nbsp]x</a><br>
+							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)">x[&nbspAbout me&nbsp]x/a><br>
+							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)">x[&nbspEmail&nbsp&nbsp&nbsp&nbsp]x</a><br>
 						</div>
 					</td>
 				</tr>
@@ -78,9 +78,9 @@
 
 <script>
 	function navButtonExpand(x){
-		x.textContent = "[ ".concat(x.textContent.substring(2,12)).concat(" ]");
+		x.textContent = "[x".concat(x.textContent.substring(2,12)).concat("x]");
 	}
 	function navButtonContract(x){
-		x.textContent = " [".concat(x.textContent.substring(2,12)).concat("] ");
+		x.textContent = "x[".concat(x.textContent.substring(2,12)).concat("]x");
 	}
 </script>
