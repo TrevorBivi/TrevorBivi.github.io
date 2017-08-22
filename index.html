@@ -24,6 +24,9 @@
 }
 </style>
 
+
+
+
 <html>
 <body bgcolor="#EEEEEE">
 		<div class="maindiv">
@@ -60,11 +63,11 @@
 					</td>
 					<td width=125 style="vertical-align:top;">
 						<div style="position:fixed;">
-							[ Home&nbsp&nbsp&nbsp&nbsp&nbsp] <br>
-							[ Profile&nbsp&nbsp] <br>
-							[ Projects&nbsp] <br>
-							[ About me&nbsp] <br>
-							[ Email&nbsp&nbsp&nbsp&nbsp] <br>
+							<a id="navButton" onmouseover="navButtonExpand(this)">&nbsp[ Home&nbsp&nbsp&nbsp&nbsp&nbsp]&nbsp</a><br>
+							<a id="navButton" onmouseover="navButtonExpand(this)">&nbsp[ Profile&nbsp&nbsp]&nbsp</a><br>
+							<a id="navButton" onmouseover="navButtonExpand(this)">&nbsp[ Projects&nbsp]&nbsp</a><br>
+							<a id="navButton" onmouseover="navButtonExpand(this)">&nbsp[ About me&nbsp]&nbsp</a><br>
+							<a id="navButton" onmouseover="navButtonExpand(this)">&nbsp[ Email&nbsp&nbsp&nbsp&nbsp]&nbsp</a><br>
 						</div>
 					</td>
 				</tr>
@@ -72,3 +75,9 @@
 		</div>
 </body>
 </html>
+
+<script>
+	function navButtonExpand(x){
+		x.textContent = "[&nbsp".concat(x.textContent.substring(1,11)).concat("&nbsp]");
+	}
+</script>
