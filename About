@@ -62,11 +62,11 @@
 					</td>
 					<td align="center" width=140>
 						<div style="position:fixed;margin:0 auto;top:130px;">
-							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)">&nbsp[&nbspHome&nbsp&nbsp&nbsp&nbsp&nbsp]&nbsp</a><br>
-							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)">&nbsp[&nbspProfile&nbsp&nbsp]&nbsp</a><br>
-							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)">&nbsp[&nbspProjects&nbsp]&nbsp</a><br>
-							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)">&nbsp[&nbspAbout me&nbsp]&nbsp</a><br>
-							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)">&nbsp[&nbspEmail&nbsp&nbsp&nbsp&nbsp]&nbsp</a><br>
+							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)" href="https://trevorbivi.github.io">&nbsp[&nbspHome&nbsp&nbsp&nbsp&nbsp&nbsp]&nbsp</a><br>
+							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)" href="https://github.com/TrevorBivi">&nbsp[&nbspProfile&nbsp&nbsp]&nbsp</a><br>
+							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)" href="https://trevorbivi.github.io/projects.html">&nbsp[&nbspProjects&nbsp]&nbsp</a><br>
+							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)" >&nbsp[&nbspAbout me&nbsp]&nbsp</a><br>
+							<a onmouseenter="navButtonExpand(this)" onmouseleave="navButtonContract(this)" href="https://trevorbivi.github.io/contact.html">>&nbsp[&nbspContact&nbsp&nbsp&nbsp&nbsp]&nbsp</a><br>
 						</div>
 					</td>
 				</tr>
