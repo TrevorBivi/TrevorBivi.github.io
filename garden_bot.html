@@ -9,6 +9,7 @@
 	width:60%;
 	margin:auto;
 	box-shadow:7px 7px 14px grey;
+	
 	font-family: Calibri, sans-serif;
 }
 .mainHead{
@@ -16,6 +17,7 @@
 	padding-left:20px;
 	padding-bottom:0px;
 	font-family: Calibri, sans-serif;
+	
 }
 .projDiv{
 	margin-left:25px;
@@ -23,10 +25,10 @@
 	overflow:hidden;
     transition:max-height 0.3s ease-out; 
 	background-color:#F6F6F6;
-	max-height:3px;
-}
-.projDiv.expanded{
 	max-height:70px;
+}
+.projDiv.collapsed{
+	max-height:3px;
 }
 .projTable{
 	width:80%;
@@ -76,7 +78,7 @@ a {
 
 <html>
 <body bgcolor="#EEEEEE">
-	<div class="mainDiv" >		
+	<div class="mainDiv">		
 	
 		<div class="mainHead">
 			<font style="font-size:40px;">Trevor Bivi</font><br>
@@ -148,20 +150,45 @@ a {
 		
 		<!--  title -->
 		<div align="center">
-			<font size="+3" color="#6b92ff" >Welcome</font><br>
+			<font size="+3" color="#6b92ff" >Arduino Smart Garden System</font><br>
 		</div>
 		
 		<div style="margin:25px; margin-top:5px;">
-		<!--  main body -->
-		
-		
-		
+		<!-- main body -->
 			
-			<font>&emsp;Welcome to my site. I'm a nineteen-year old who has been interested in electronics and coding since I was a child. I'm also a sophomore Software Engineering student at Carleton university and was among the top 15% of my class first year.</font><br>
+			<img src="https://trevorbivi.github.io/code.jpg" height="20" style="margin-leftt:1px; margin-right:1px;">
+			<font size="+2" color="#6b92ff">Language used</font>
+			<br>
+			<font>&emsp;C was used.</font>
+			<br><br>
 		
+			<img src="https://trevorbivi.github.io/question_mark.jpg" height="20" style="margin-left:8px;margin-right:8px;">
+			
+			<font size="+2" color="#6b92ff" >What it is</font>
+			<br>
+			<font>&emsp;This is a system that can automatically and economically water gardens with a microcontroller. Rain barrels are used as the primary water source to further decrease garden costs. It also hosts a simple local site to conveniently display information to users.</font>
+			<br><br>
+			
+			<img src="https://trevorbivi.github.io/gear.jpg" height="20"  style="margin-left5px;margin-right:6px;">
+			<font size="+2" color="#6b92ff" >How it works</font>
+			<br>
+			<font>&emsp;An ethernet LAN network module allows the Arduino use http requests to periodically gather weather data from openweathermap.api and the current time from convert-unix-time.com. The Arduino has analog-to-digital converters which use resistive sensors to occasionally measure soil moisture in different garden sections. Weather data and soil moisture is to decide whether garden sections should be watered. If the water in the rain barrels is detected to be too low with an ultrasonic sensor, they will first be filled with hose water using another electric valve. To water a garden section, it's designated solenoid valve is opened for some time using a relay allowing water from the rain barrels to flow through a drip irrigation system. To host the site, an http response containing the site information is sent to any incoming http requests. </font>
+			<br><br>
+			
+			<img src="https://trevorbivi.github.io/wrench.jpg" height="20"  style="margin-left:6px;margin-right:6px;">
+			<font size="+2" color="#6b92ff" >Future work</font>
+			<br>
+			<font>&emsp;While the software is complete, I still need to finish building a final version of the physical system once it warms up outside. The rain barrel's ultrasonic sensor might not stand up to the moisture well and need to be replaced with a resistive sensor. Also, The site is more simplistic than I would like because of the small amount of RAM Arduinos have. I could fix this by creating a JavaScript web browser add-on to better format the site.</font>
+			<br><br>
+			<div align="center">
+				<a href="https://trevorbivi.github.io/garden_bot_parts.jpg">
+					<img src="https://trevorbivi.github.io/garden_bot_parts.jpg" align="center" height="250"><br>
+				</a>
+				<font color="777777"><i>The current state of the physical system.</i></font>
+			</div>
+			<br>
 		
-		
-		<!-- end of main body  -->
+		<!--   -->
 		</div>
 		
 		<br>
@@ -171,7 +198,7 @@ a {
 </html>
 
 <script>
-	var projExpanded = false;
+	var projExpanded = true;
 	function primaryOut(x){
 		x.style.color = "#000000";
 	}
@@ -183,10 +210,10 @@ a {
 			document.getElementById("projButton").style.backgroundColor = "#FFFFFF";
 			projExpanded = false;
 		}else{
-			document.getElementById("projButton").style.backgroundColor = "#F6F6F6";
+			document.getElementById("projButton").style.backgroundColor = "#EEEEEE";
 			projExpanded = true;
 		}
-		document.getElementById("projectDiv").classList.toggle('expanded');
+		document.getElementById("projectDiv").classList.toggle('collapsed');
 	}
 	
 	

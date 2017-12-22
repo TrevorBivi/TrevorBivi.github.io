@@ -9,6 +9,7 @@
 	width:60%;
 	margin:auto;
 	box-shadow:7px 7px 14px grey;
+	
 	font-family: Calibri, sans-serif;
 }
 .mainHead{
@@ -16,6 +17,7 @@
 	padding-left:20px;
 	padding-bottom:0px;
 	font-family: Calibri, sans-serif;
+	
 }
 .projDiv{
 	margin-left:25px;
@@ -23,10 +25,10 @@
 	overflow:hidden;
     transition:max-height 0.3s ease-out; 
 	background-color:#F6F6F6;
-	max-height:3px;
-}
-.projDiv.expanded{
 	max-height:70px;
+}
+.projDiv.collapsed{
+	max-height:3px;
 }
 .projTable{
 	width:80%;
@@ -76,7 +78,7 @@ a {
 
 <html>
 <body bgcolor="#EEEEEE">
-	<div class="mainDiv" >		
+	<div class="mainDiv">		
 	
 		<div class="mainHead">
 			<font style="font-size:40px;">Trevor Bivi</font><br>
@@ -148,20 +150,44 @@ a {
 		
 		<!--  title -->
 		<div align="center">
-			<font size="+3" color="#6b92ff" >Welcome</font><br>
+			<font size="+3" color="#6b92ff" >Tetris Bot</font><br>
 		</div>
 		
 		<div style="margin:25px; margin-top:5px;">
-		<!--  main body -->
-		
-		
-		
+		<!-- main body -->
 			
-			<font>&emsp;Welcome to my site. I'm a nineteen-year old who has been interested in electronics and coding since I was a child. I'm also a sophomore Software Engineering student at Carleton university and was among the top 15% of my class first year.</font><br>
+			<img src="https://trevorbivi.github.io/code.jpg" height="20" style="margin-leftt:1px; margin-right:1px;">
+			<font size="+2" color="#6b92ff">Languages used</font>
+			<br>
+			<font>&emsp;Python extended with C.</font>
+			<br><br>
 		
+			<img src="https://trevorbivi.github.io/question_mark.jpg" height="20" style="margin-left:8px;margin-right:8px;">
+			
+			<font size="+2" color="#6b92ff" >What it is</font>
+			<br>
+			<font>&emsp;A bot that automatically plays marathon mode and battle two-person mode on tetrisfriends.com, trying to use only Tetris (clearing 4 lines at once).</font>
+			<br><br>
+			<div align="center">
+				<iframe height="250" src="https://www.youtube-nocookie.com/embed/mkOXuTkTAoY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				<br>
+				<font color="777777"><i>A video of the bot reaching level 13 of 15 on marathon mode with one back-to-back Tetris combo</i></font>
+			</div>
+			
+			
+			<img src="https://trevorbivi.github.io/gear.jpg" height="20"  style="margin-left5px;margin-right:6px;">
+			<font size="+2" color="#6b92ff" >How it works</font>
+			<br>
+			<font>&emsp;This bot reads pixel colors to capture board data. It then simulates all possible moves in the coming four turns to find the next move for the best outcome in four turns. The best outcome is determined by weighing in factors like the amount of Tetris that are performed, the number of holes created or removed, and the sum squared error of the column heights. A low sum squared error means there will be lots of ways to place blocks neatly in the future. This part of the program was re-written in C and sped up the average time needed to complete all simulations by over 100x. The bot then performs the chosen move and repeats. </font>
+			<br><br>
+			
+			<img src="https://trevorbivi.github.io/wrench.jpg" height="20"  style="margin-left:6px;margin-right:6px;">
+			<font size="+2" color="#6b92ff" >Potential improvements</font>
+			<br>
+			<font>&emsp;This bot decides what its current move should be while its current piece is already falling. It would be better to make it start simulating the options for its next move while performing its current one with multiprocessing. Primarily using t-spins instead of Tetris combos would also give more points.</font>
+			<br>
 		
-		
-		<!-- end of main body  -->
+		<!--   -->
 		</div>
 		
 		<br>
@@ -171,7 +197,7 @@ a {
 </html>
 
 <script>
-	var projExpanded = false;
+	var projExpanded = true;
 	function primaryOut(x){
 		x.style.color = "#000000";
 	}
@@ -183,10 +209,10 @@ a {
 			document.getElementById("projButton").style.backgroundColor = "#FFFFFF";
 			projExpanded = false;
 		}else{
-			document.getElementById("projButton").style.backgroundColor = "#F6F6F6";
+			document.getElementById("projButton").style.backgroundColor = "#EEEEEE";
 			projExpanded = true;
 		}
-		document.getElementById("projectDiv").classList.toggle('expanded');
+		document.getElementById("projectDiv").classList.toggle('collapsed');
 	}
 	
 	

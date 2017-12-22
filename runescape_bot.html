@@ -9,6 +9,7 @@
 	width:60%;
 	margin:auto;
 	box-shadow:7px 7px 14px grey;
+	
 	font-family: Calibri, sans-serif;
 }
 .mainHead{
@@ -16,6 +17,7 @@
 	padding-left:20px;
 	padding-bottom:0px;
 	font-family: Calibri, sans-serif;
+	
 }
 .projDiv{
 	margin-left:25px;
@@ -23,10 +25,10 @@
 	overflow:hidden;
     transition:max-height 0.3s ease-out; 
 	background-color:#F6F6F6;
-	max-height:3px;
-}
-.projDiv.expanded{
 	max-height:70px;
+}
+.projDiv.collapsed{
+	max-height:3px;
 }
 .projTable{
 	width:80%;
@@ -76,7 +78,7 @@ a {
 
 <html>
 <body bgcolor="#EEEEEE">
-	<div class="mainDiv" >		
+	<div class="mainDiv">		
 	
 		<div class="mainHead">
 			<font style="font-size:40px;">Trevor Bivi</font><br>
@@ -148,20 +150,52 @@ a {
 		
 		<!--  title -->
 		<div align="center">
-			<font size="+3" color="#6b92ff" >Welcome</font><br>
+			<font size="+3" color="#6b92ff" >Runescape Bot API</font><br>
 		</div>
 		
 		<div style="margin:25px; margin-top:5px;">
-		<!--  main body -->
-		
-		
-		
+		<!-- main body -->
 			
-			<font>&emsp;Welcome to my site. I'm a nineteen-year old who has been interested in electronics and coding since I was a child. I'm also a sophomore Software Engineering student at Carleton university and was among the top 15% of my class first year.</font><br>
+			<img src="https://trevorbivi.github.io/code.jpg" height="20" style="margin-leftt:1px; margin-right:1px;">
+			<font size="+2" color="#6b92ff">Languages used</font>
+			<br>
+			<font>&emsp;Python was used.</font>
+			<br><br>
 		
+			<img src="https://trevorbivi.github.io/question_mark.jpg" height="20" style="margin-left:8px;margin-right:8px;">
+			
+			<font size="+2" color="#6b92ff" >What it is</font>
+			<br>
+			<font>&emsp;This is a python API for making bots to automate repetitive tasks in Old School RuneScape. It provides methods for creating realistic key and mouse inputs. It also provides useful methods to derive information from the game and interact with it. Some key examples are...</font>
+			<ul type="disc" style="margin:0px;">
+				<li>Get current game coordinates</li>
+				<li>Travel to game coordinates by clicking where to walk on the "minimap"</li>
+				<li>Wait to see a key image</li>
+				<li>Click somewhere relative to a key image</li>
+				<li>Compare in game text to a string</li>
+			</ul>
+			<br>
+			<div align="center">
+				<a href="https://trevorbivi.github.io/runescape_bot.jpg">
+					<img src="https://trevorbivi.github.io/runescape_bot.jpg" height="250">
+				</a>
+				<br>
+				<font color="777777"><i>A bot making bowstrings</i></font>
+			</div>
+			
+			
+			<img src="https://trevorbivi.github.io/gear.jpg" height="20"  style="margin-left5px;margin-right:6px;">
+			<font size="+2" color="#6b92ff" >How it works</font>
+			<br>
+			<font>&emsp;Open CV is used for image analysis to gather different information about the game. Inputs can be sent to the key and mouse streams to control the game. Mouse movements are made less robotic looking by playing back recordings of human mouse movements. To make key presses appear more real, Gaussian random wait times are used between events.<font>			<br><br>
+			
+			<img src="https://trevorbivi.github.io/wrench.jpg" height="20"  style="margin-left:6px;margin-right:6px;">
+			<font size="+2" color="#6b92ff" >Potential improvements</font>
+			<br>
+			<font>&emsp;I would like to improve the convenience of some of the methods. For example, the method to travel to a position in game can't get around large obstacles well because it does not use pathfinding. Using something like Dijkstra's algorithm to find a path other than a straight line to the end point would allow for shorter, safer programs.</font>
+			<br>
 		
-		
-		<!-- end of main body  -->
+		<!--   -->
 		</div>
 		
 		<br>
@@ -171,7 +205,7 @@ a {
 </html>
 
 <script>
-	var projExpanded = false;
+	var projExpanded = true;
 	function primaryOut(x){
 		x.style.color = "#000000";
 	}
@@ -183,10 +217,10 @@ a {
 			document.getElementById("projButton").style.backgroundColor = "#FFFFFF";
 			projExpanded = false;
 		}else{
-			document.getElementById("projButton").style.backgroundColor = "#F6F6F6";
+			document.getElementById("projButton").style.backgroundColor = "#EEEEEE";
 			projExpanded = true;
 		}
-		document.getElementById("projectDiv").classList.toggle('expanded');
+		document.getElementById("projectDiv").classList.toggle('collapsed');
 	}
 	
 	
