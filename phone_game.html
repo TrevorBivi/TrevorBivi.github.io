@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<style>
+
+.mainDiv{
+	background-color:#FFFFFF;
+	min-width:800px;
+	max-width:1025px;
+	width:60%;
+	margin:auto;
+	box-shadow:7px 7px 14px grey;
+	
+	font-family: Calibri, sans-serif;
+}
+.mainHead{
+	padding: 5px;
+	padding-left:20px;
+	padding-bottom:0px;
+	font-family: Calibri, sans-serif;
+	
+}
+.projDiv{
+	margin-left:25px;
+	margin-right:25px;
+	overflow:hidden;
+    transition:max-height 0.3s ease-out; 
+	background-color:#F6F6F6;
+	max-height:70px;
+}
+.projDiv.collapsed{
+	max-height:3px;
+}
+.projTable{
+	width:80%;
+	margin:auto;
+	text-align:center;
+}
+.projButton{
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; 
+	display: inline-block;
+	padding:0px;
+	padding-left:15px;
+	padding-right:15px;
+	font-family: Calibri, sans-serif;
+	color:"#000000";
+}
+
+
+.navButton{
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; 
+
+	display: inline-block;
+	padding:0px;
+	padding-left:15px;
+	padding-right:15px;
+	font-family: Calibri, sans-serif;
+	color:"#000000";
+	text-decoration: none;
+}
+a {
+  color:black;
+  text-decoration: none; /* no underline */
+}
+</style>
+
+
+
+
+<html>
+<body bgcolor="#EEEEEE">
+	<div class="mainDiv">		
+	
+		<div class="mainHead">
+			<font style="font-size:40px;">Trevor Bivi</font><br>
+			<table style="font-size:20px; width:100%;">
+				<tr>
+					<td>
+						<font color="#777777">Software Engineering Student</font>
+					</td>
+					<td align=right>
+						<a class="navButton" href="https://trevorbivi.github.io/index.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" >
+							Home
+						</a>
+						<a class="navButton" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
+							Projects
+						</a>
+						<a class="navButton" href="https://trevorbivi.github.io/about.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							About
+						</a>
+						<a class="navButton"  href="https://github.com/TrevorBivi" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							GitHub
+						</a>
+						<a class="navButton" href="https://trevorbivi.github.io/contact.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Contact
+						</a>
+						
+					</td>
+				</tr>			
+			</table>
+		</div>
+		
+		<div class="projDiv" id="projectDiv">
+			<table class="projTable">
+				<tr>
+					<td style="width:33%">
+						<a class="navButton" href="https://trevorbivi.github.io/runescape_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							RuneScape Bot
+						</a>
+					</td>
+					<td style="width:34%">
+						<a class="navButton" href="https://trevorbivi.github.io/garden_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Garden Bot
+						</a>
+					</td>
+					<td style="width:33%">
+						<a class="navButton" href="https://trevorbivi.github.io/tetris_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Tetris Bot
+						</a>
+					</td>
+				</tr>
+				<tr>
+				    <td>
+						<a class="navButton" href="https://trevorbivi.github.io/steam_market_analyser.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Steam Market Analyser
+						</a>
+					</td>
+					<td>
+						<a class="navButton" href="https://trevorbivi.github.io/computer_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Computer Game
+						</a>
+					</td>
+					<td>
+						<a class="navButton" href="https://trevorbivi.github.io/phone_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Phone Game
+						</a>
+					</td>
+				</tr>				
+			</table>
+		</div>
+		
+		<!--  title -->
+		<div align="center">
+			<font size="+3" color="#6b92ff" >Tetris Bot</font><br>
+		</div>
+		
+		<div style="margin:25px; margin-top:5px;">
+		<!-- main body -->
+			
+			<img src="https://trevorbivi.github.io/code.jpg" height="20" style="margin-leftt:1px; margin-right:1px;">
+			<font size="+2" color="#6b92ff">Languages used</font>
+			<br>
+			<font>&emsp;Python extended with C.</font>
+			<br><br>
+		
+			<img src="https://trevorbivi.github.io/question_mark.jpg" height="20" style="margin-left:8px;margin-right:8px;">
+			
+			<font size="+2" color="#6b92ff" >What it is</font>
+			<br>
+			<font>&emsp;This is an educational Super Mario style phone app I lead the creation of as part of a group of three.</font>
+					
+			<br><br>
+			<div align="center">
+				
+				<embed src="https://trevorbivi.github.io/math_monster_computer_port.swf">
+
+				<br>
+				<font color="777777"><i>The game. An unlock all levels option and keyboard controls have been added.<br>
+				Move left: A or left arrow<br>
+				Move right: D or right arrow<br>
+				Jump: W, up arrow or space bar</i></font>
+			</div>
+			
+			
+			<img src="https://trevorbivi.github.io/gear.jpg" height="20"  style="margin-left5px;margin-right:6px;">
+			<font size="+2" color="#6b92ff" >How it works</font>
+			<br>
+			<font>&emsp;This is another example of object oriented programming. I was responsible for the creation of a collision engine, special interactive objects like springs and moving platforms as well as a cookie based save system to remember the unlocked levels.</font>
+			<br><br>
+			
+
+		<!--   -->
+		</div>
+		
+		<br>
+	</div>
+
+</body>
+</html>
+
+<script>
+	var projExpanded = true;
+	function primaryOut(x){
+		x.style.color = "#000000";
+	}
+	function primaryEnter(x){
+		x.style.color = "#606060";
+	}
+	function toggleProj(x){
+		if(projExpanded){
+			document.getElementById("projButton").style.backgroundColor = "#FFFFFF";
+			projExpanded = false;
+		}else{
+			document.getElementById("projButton").style.backgroundColor = "#EEEEEE";
+			projExpanded = true;
+		}
+		document.getElementById("projectDiv").classList.toggle('collapsed');
+	}
+	
+	
+	
+	
+</script>
