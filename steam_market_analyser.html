@@ -154,52 +154,59 @@ a {
 		
 		<!--  title -->
 		<div align="center" style="position:relative;">
-			<div class="devDate">July 2014</div>
-			<font size="+3" color="#6b92ff" >Phone Game</font><br>
+			<div class="devDate">Oct 2017</div>
+			<font size="+3" color="#6b92ff" >Runescape Bot API</font><br>
 		</div>
 		
 		<div style="margin:25px; margin-top:5px;">
 		<!-- main body -->
 			
 			<img src="https://trevorbivi.github.io/code.jpg" height="20" style="margin-leftt:1px; margin-right:1px;">
-			<font size="+2" color="#6b92ff">Language used</font>
+			<font size="+2" color="#6b92ff">Languages used</font>
 			<br>
-			<font>&emsp;ActionScript 3.0 was used.</font>
+			<font>&emsp;This was written in Python and uses the MATLAB engine API to also run MATLAB code from Python.</font>
 			<br><br>
 		
 			<img src="https://trevorbivi.github.io/question_mark.jpg" height="20" style="margin-left:8px;margin-right:8px;">
 			<font size="+2" color="#6b92ff" >What it is</font>
 			<br>
 			<font>
-				&emsp;This is an educational Super Mario style phone app. I lead the development of this as part 
-				of a group of three. We were tasked with developing a game that a group of third-grade children 
-				wanted us to create.
-			</font>					
-			<br><br>
+				&emsp;This is a program for finding video game items on the Steam Market that are consistently increasing in price.
+			</font>
+			<br>
 			
 			<div align="center">
-				<embed src="https://trevorbivi.github.io/math_monster_computer_port.swf" width="683" height="400">
+				<a href="https://trevorbivi.github.io/runescape_bot.jpg">
+					<img src="https://trevorbivi.github.io/runescape_bot.jpg" height="250">
+				</a>
 				<br>
-				<font color="777777"><i>
-					The game. An unlock all levels option and keyboard controls have been added.<br>
-					Move left: A or left arrow<br>
-					Move right: D or right arrow<br>
-					Jump: W, up arrow or space bar
-				</i></font>
+				<font color="777777"><i>A plot of an item's price history</i></font>
 			</div>
 			<br>
 			
 			<img src="https://trevorbivi.github.io/gear.jpg" height="20"  style="margin-left5px;margin-right:6px;">
-			<font size="+2" color="#6b92ff" >My Role</font>
+			<font size="+2" color="#6b92ff" >How it works</font>
 			<br>
 			<font>
-				&emsp;I was mainly responsible for the creation of a collision engine, special interactive objects 
-				like springs and moving platforms as well as a cookie based save system to remember the unlocked 
-				levels. I was the only one in the group who had already used ActionScript 3.0 on my own outside 
-				of school, so I also helped teach my partners and reviewed their code.
-			</font>
+				&emsp;Price history of items are gathered from the steam website using the requests library for python. MATLAB code 
+				then finds the lines of best fit of the price histories using linear regression. Items that have a large positive 
+				slope and strong correlation are considered possible good investments. The MATLAB engine is also used to plot price 
+				history information to provide a way for users to rapidly check recommendations.
+			<font>
 			<br><br>
 			
+			<img src="https://trevorbivi.github.io/wrench.jpg" height="20"  style="margin-left:6px;margin-right:6px;">
+			<font size="+2" color="#6b92ff" >Potential improvements</font>
+			<br>
+			<font>
+				&emsp;Virtually all items either have turbulent prices or are consistently decreasing. This system could be improved 
+				by first ruling out consistently decreasing items using lines of best fit. The remaining items could be checked with 
+				a neural network try to guess good recommendations using variables like price history, game the item belongs to and 
+				change in game’s Steam players per day. I think this has a good chance of working since people have reported success 
+				using neural networks to predict when stocks will be rising or falling in value.
+			</font>
+			<br>
+		
 		<!--   -->
 		</div>
 		<br>

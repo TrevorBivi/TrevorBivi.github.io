@@ -19,12 +19,17 @@
 	font-family: Calibri, sans-serif;
 	
 }
+.devDate{
+	position:absolute;
+	top:5px;
+	right:25px;
+}
 .projDiv{
 	margin-left:25px;
 	margin-right:25px;
 	overflow:hidden;
     transition:max-height 0.3s ease-out; 
-	background-color:#F6F6F6;
+	background-color:#F0F0F0;
 	max-height:70px;
 }
 .projDiv.collapsed{
@@ -91,19 +96,18 @@ a {
 						<a class="navButton" href="https://trevorbivi.github.io/index.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" >
 							Home
 						</a>
-						<a class="navButton" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
+						<a class="navButton" href="https://trevorbivi.github.io/tetris_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
 							Projects
 						</a>
 						<a class="navButton" href="https://trevorbivi.github.io/about.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							About
 						</a>
-						<a class="navButton"  href="https://github.com/TrevorBivi" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							GitHub
-						</a>
 						<a class="navButton" href="https://trevorbivi.github.io/contact.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							Contact
 						</a>
-						
+						<a class="navButton"  href="https://github.com/TrevorBivi" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							GitHub
+						</a>
 					</td>
 				</tr>			
 			</table>
@@ -114,12 +118,12 @@ a {
 				<tr>
 					<td style="width:33%">
 						<a class="navButton" href="https://trevorbivi.github.io/runescape_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							RuneScape Bot
+							RuneScape Bot API
 						</a>
 					</td>
-					<td style="width:34%">
+					<td style="width:33%">
 						<a class="navButton" href="https://trevorbivi.github.io/garden_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Garden Bot
+							Garden Watering System
 						</a>
 					</td>
 					<td style="width:33%">
@@ -136,7 +140,7 @@ a {
 					</td>
 					<td>
 						<a class="navButton" href="https://trevorbivi.github.io/computer_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Computer Game
+							3D Computer Game
 						</a>
 					</td>
 					<td>
@@ -149,8 +153,9 @@ a {
 		</div>
 		
 		<!--  title -->
-		<div align="center">
-			<font size="+3" color="#6b92ff" >Arduino Smart Garden System</font><br>
+		<div align="center" style="position:relative;">
+			<div class="devDate">Aug 2017 - Sept 2017</div>
+			<font size="+3" color="#6b92ff" >Garden Watering System</font><br>
 		</div>
 		
 		<div style="margin:25px; margin-top:5px;">
@@ -163,23 +168,42 @@ a {
 			<br><br>
 		
 			<img src="https://trevorbivi.github.io/question_mark.jpg" height="20" style="margin-left:8px;margin-right:8px;">
-			
 			<font size="+2" color="#6b92ff" >What it is</font>
 			<br>
-			<font>&emsp;This is a system that can automatically and economically water gardens with a microcontroller. Rain barrels are used as the primary water source to further decrease garden costs. It also hosts a simple local site to conveniently display information to users.</font>
+			<font>
+				&emsp;This is a garden watering system that uses an Arduino Uno microcontroller to economically decide 
+				when to water. Rain barrels are used as the primary water source to further decrease garden costs. 
+				The microcontroller also hosts a simple local site to conveniently display information to users.
+			</font>
 			<br><br>
 			
 			<img src="https://trevorbivi.github.io/gear.jpg" height="20"  style="margin-left5px;margin-right:6px;">
 			<font size="+2" color="#6b92ff" >How it works</font>
 			<br>
-			<font>&emsp;An ethernet LAN network module allows the Arduino use http requests to periodically gather weather data from openweathermap.api and the current time from convert-unix-time.com. The Arduino has analog-to-digital converters which use resistive sensors to occasionally measure soil moisture in different garden sections. Weather data and soil moisture is to decide whether garden sections should be watered. If the water in the rain barrels is detected to be too low with an ultrasonic sensor, they will first be filled with hose water using another electric valve. To water a garden section, it's designated solenoid valve is opened for some time using a relay allowing water from the rain barrels to flow through a drip irrigation system. To host the site, an http response containing the site information is sent to any incoming http requests. </font>
+			<font>
+				&emsp;An ethernet LAN network module allows the Arduino to use http requests to periodically get the 
+				current time and weather forecast data. The Arduino also measures soil moisture using resistive 
+				water sensors. Once a day, this weather and soil moisture data is used to decide which garden 
+				sections should be watered. To water a garden section, it's designated solenoid valve is opened 
+				for some time using a relay allowing water from the rain barrels to flow through a drip irrigation 
+				system. If the water in the rain barrels is detected to be too low with an ultrasonic sensor, they 
+				will first be filled with hose water using another electric valve. To host the site, an http response 
+				containing the site information is sent to any incoming http requests.
+			</font>
 			<br><br>
 			
 			<img src="https://trevorbivi.github.io/wrench.jpg" height="20"  style="margin-left:6px;margin-right:6px;">
 			<font size="+2" color="#6b92ff" >Future work</font>
 			<br>
-			<font>&emsp;While the software is complete, I still need to finish building a final version of the physical system once it warms up outside. The rain barrel's ultrasonic sensor might not stand up to the moisture well and need to be replaced with a resistive sensor. Also, The site is more simplistic than I would like because of the small amount of RAM Arduinos have. I could fix this by creating a JavaScript web browser add-on to better format the site.</font>
+			<font>
+				&emsp;While the software is complete, I still need to finish building a final version of the physical 
+				system once it warms up outside. It may turn out the rain barrels’ ultrasonic sensor might not stand 
+				up to the moisture well and need to be replaced with a resistive sensor. Also, the site is more 
+				simplistic than I would like because of the small amount of RAM Arduinos have. I could fix this by 
+				creating a JavaScript web browser add-on to better format the site.
+			</font>
 			<br><br>
+			
 			<div align="center">
 				<a href="https://trevorbivi.github.io/garden_bot_parts.jpg">
 					<img src="https://trevorbivi.github.io/garden_bot_parts.jpg" align="center" height="250"><br>
@@ -198,25 +222,17 @@ a {
 </html>
 
 <script>
+	function primaryOut(x){x.style.color = "#000000";}
+	function primaryEnter(x){x.style.color = "#606060";}
+	
 	var projExpanded = true;
-	function primaryOut(x){
-		x.style.color = "#000000";
-	}
-	function primaryEnter(x){
-		x.style.color = "#606060";
-	}
 	function toggleProj(x){
 		if(projExpanded){
 			document.getElementById("projButton").style.backgroundColor = "#FFFFFF";
-			projExpanded = false;
 		}else{
 			document.getElementById("projButton").style.backgroundColor = "#EEEEEE";
-			projExpanded = true;
 		}
+		projExpanded = !projExpanded;
 		document.getElementById("projectDiv").classList.toggle('collapsed');
 	}
-	
-	
-	
-	
 </script>

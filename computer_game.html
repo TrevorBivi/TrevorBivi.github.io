@@ -19,12 +19,17 @@
 	font-family: Calibri, sans-serif;
 	
 }
+.devDate{
+	position:absolute;
+	top:5px;
+	right:25px;
+}
 .projDiv{
 	margin-left:25px;
 	margin-right:25px;
 	overflow:hidden;
     transition:max-height 0.3s ease-out; 
-	background-color:#F6F6F6;
+	background-color:#F0F0F0;
 	max-height:70px;
 }
 .projDiv.collapsed{
@@ -91,19 +96,18 @@ a {
 						<a class="navButton" href="https://trevorbivi.github.io/index.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" >
 							Home
 						</a>
-						<a class="navButton" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
+						<a class="navButton" href="https://trevorbivi.github.io/tetris_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
 							Projects
 						</a>
 						<a class="navButton" href="https://trevorbivi.github.io/about.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							About
 						</a>
-						<a class="navButton"  href="https://github.com/TrevorBivi" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							GitHub
-						</a>
 						<a class="navButton" href="https://trevorbivi.github.io/contact.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							Contact
 						</a>
-						
+						<a class="navButton"  href="https://github.com/TrevorBivi" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							GitHub
+						</a>
 					</td>
 				</tr>			
 			</table>
@@ -114,12 +118,12 @@ a {
 				<tr>
 					<td style="width:33%">
 						<a class="navButton" href="https://trevorbivi.github.io/runescape_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							RuneScape Bot
+							RuneScape Bot API
 						</a>
 					</td>
-					<td style="width:34%">
+					<td style="width:33%">
 						<a class="navButton" href="https://trevorbivi.github.io/garden_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Garden Bot
+							Garden Watering System
 						</a>
 					</td>
 					<td style="width:33%">
@@ -136,7 +140,7 @@ a {
 					</td>
 					<td>
 						<a class="navButton" href="https://trevorbivi.github.io/computer_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Computer Game
+							3D Computer Game
 						</a>
 					</td>
 					<td>
@@ -149,7 +153,8 @@ a {
 		</div>
 		
 		<!--  title -->
-		<div align="center">
+		<div align="center" style="position:relative;">
+			<div class="devDate">Jan 2017 - May 2017</div>
 			<font size="+3" color="#6b92ff" >Computer Game</font><br>
 		</div>
 		
@@ -157,43 +162,61 @@ a {
 		<!-- main body -->
 			
 			<img src="https://trevorbivi.github.io/code.jpg" height="20" style="margin-leftt:1px; margin-right:1px;">
-			<font size="+2" color="#6b92ff">Languages used</font>
+			<font size="+2" color="#6b92ff">Language used</font>
 			<br>
 			<font>&emsp;C# was used.</font>
 			<br><br>
 		
 			<img src="https://trevorbivi.github.io/question_mark.jpg" height="20" style="margin-left:8px;margin-right:8px;">
-			
 			<font size="+2" color="#6b92ff" >What it is</font>
 			<br>
-			<font>&emsp;This is the start of a game made using the 3D Unity engine. The initial version was a single player game and I have not converted a lot of it to a multiplayer version. Here are some of the features I've created...</font>
+			<font>
+				&emsp;This is a first-person shooter game created with the Unity 3D engine. 
+				Players shoot an endless hoard of zombies that can run, climb and jump to get 
+				to them. I first created a single player version then re-wrote most of it to 
+				work with multiplayer. Here are some of the features I’ve created
+			</font>
 			<ul type="disc"  style="margin:0px;">
-				<li>Various guns</li>
-				<li>A node based path finding algorithm capable of climbing and jumping</li>
+				<li>A node based path finding algorithm</li>
 				<li>Ability to severe enemies' limbs</li>
 				<li>Helicopter AI that shoots visible enemies</li>
 			</ul>
-			
 			<br><br>
+			
 			<div align="center">
 				<iframe height="250" src="https://www.youtube.com/embed/sgIh9mzClrs" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 				<iframe height="250" src="https://www.youtube.com/embed/FXEk0Sdp1s8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 				<br>
 				<font color="777777"><i>Sample gameplay</i></font>
 			</div>
-			
+			<br>
 			
 			<img src="https://trevorbivi.github.io/gear.jpg" height="20"  style="margin-left5px;margin-right:6px;">
 			<font size="+2" color="#6b92ff" >How it works</font>
 			<br>
-			<font>&emsp;This project made extensive use of object oriented programming. A recursive node based pathfinding algorithm uses shape casting to determine other nodes that can be walked to and the best next node to each node for each node. Shape casting is also used to determine what bullets from guns should hit. As well, recursive functions are also used to determine what bone an enemy is being split at when it loses a limb. </font>
+			<font>
+				&emsp;This project made extensive use of object oriented programming and recursive 
+				functions to develop the enemies. A recursive node based pathfinding algorithm close to 
+				Dijkstra's algorithm is used for determining the best paths in between all nodes so 
+				enemy objects can reach players anywhere.  Furthermore, recursive functions are used to 
+				determine where enemies were hit when they are shot and to spawn a ragdoll object with 
+				bones in the right position when enemies die.
+			</font>
 			<br><br>
 			
 			<img src="https://trevorbivi.github.io/wrench.jpg" height="20"  style="margin-left:6px;margin-right:6px;">
 			<font size="+2" color="#6b92ff" >Potential improvements</font>
 			<br>
-			<font>&emsp;I have currently only created the core features a game I create will need. I am waiting to come up with a good idea before I invest more time in this project. However, I have already bought an Xbox 360 Kinect that I have used to create a 3D scan of my body then 3D traced using Blender to create a realistic looking model. The kinect can also somewhat reliably record movements making it a useful aid for animating.</font>
+			<font>
+				&emsp;I want to use the knowledge I have gained from this project to make more 
+				advanced and original game. I might switch to using the Unreal Engine to do this since 
+				game developers seem to be favouring it over Unity more every year. I have already 
+				bought an Xbox 360 Kinect that I have used to create a 3D scan of my body which I 3D 
+				traced using Blender to create a realistic looking model. The Kinect can also somewhat 
+				reliably record body movements making it a useful aid for animating.
+			</font>
 			<br>
+			
 			<div align="center">
 				<a href="https://trevorbivi.github.io/game_model.jpg">
 					<img src="https://trevorbivi.github.io/game_model.jpg" height="250">
@@ -205,31 +228,23 @@ a {
 		</div>
 		
 		<br>
+		
 	</div>
-
 </body>
 </html>
 
 <script>
+	function primaryOut(x){x.style.color = "#000000";}
+	function primaryEnter(x){x.style.color = "#606060";}
+	
 	var projExpanded = true;
-	function primaryOut(x){
-		x.style.color = "#000000";
-	}
-	function primaryEnter(x){
-		x.style.color = "#606060";
-	}
 	function toggleProj(x){
 		if(projExpanded){
 			document.getElementById("projButton").style.backgroundColor = "#FFFFFF";
-			projExpanded = false;
 		}else{
 			document.getElementById("projButton").style.backgroundColor = "#EEEEEE";
-			projExpanded = true;
 		}
+		projExpanded = !projExpanded;
 		document.getElementById("projectDiv").classList.toggle('collapsed');
 	}
-	
-	
-	
-	
 </script>

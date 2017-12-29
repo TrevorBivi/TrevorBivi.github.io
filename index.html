@@ -9,6 +9,7 @@
 	width:60%;
 	margin:auto;
 	box-shadow:7px 7px 14px grey;
+	
 	font-family: Calibri, sans-serif;
 }
 .mainHead{
@@ -16,17 +17,23 @@
 	padding-left:20px;
 	padding-bottom:0px;
 	font-family: Calibri, sans-serif;
+	
+}
+.devDate{
+	position:absolute;
+	top:5px;
+	right:25px;
 }
 .projDiv{
 	margin-left:25px;
 	margin-right:25px;
 	overflow:hidden;
     transition:max-height 0.3s ease-out; 
-	background-color:#F6F6F6;
-	max-height:3px;
-}
-.projDiv.expanded{
+	background-color:#F0F0F0;
 	max-height:70px;
+}
+.projDiv.collapsed{
+	max-height:3px;
 }
 .projTable{
 	width:80%;
@@ -47,7 +54,6 @@
 	font-family: Calibri, sans-serif;
 	color:"#000000";
 }
-
 
 .navButton{
 	-webkit-touch-callout: none; /* iOS Safari */
@@ -70,8 +76,6 @@ a {
   text-decoration: none; /* no underline */
 }
 </style>
-
-
 
 
 <html>
@@ -153,14 +157,13 @@ a {
 		
 		<div style="margin:25px; margin-top:5px;">
 		<!--  main body -->
-		
-		
-		
-			
-			<font>&emsp;Welcome to my site. I'm a nineteen-year old who has been interested in electronics and coding since I was a child. I'm also a sophomore Software Engineering student at Carleton university and was among the top 15% of my class first year.</font><br>
-		
-		
-		
+
+			<font>
+				&emsp;Welcome to my site! I'm a nineteen-year old Software Engineering student who has 
+				been interested in electronics and coding since I was a child.
+			</font>
+			<br>
+
 		<!-- end of main body  -->
 		</div>
 		
@@ -170,26 +173,19 @@ a {
 </body>
 </html>
 
+
 <script>
-	var projExpanded = false;
-	function primaryOut(x){
-		x.style.color = "#000000";
-	}
-	function primaryEnter(x){
-		x.style.color = "#606060";
-	}
+	function primaryOut(x){x.style.color = "#000000";}
+	function primaryEnter(x){x.style.color = "#606060";}
+	
+	var projExpanded = true;
 	function toggleProj(x){
 		if(projExpanded){
 			document.getElementById("projButton").style.backgroundColor = "#FFFFFF";
-			projExpanded = false;
 		}else{
-			document.getElementById("projButton").style.backgroundColor = "#F6F6F6";
-			projExpanded = true;
+			document.getElementById("projButton").style.backgroundColor = "#EEEEEE";
 		}
-		document.getElementById("projectDiv").classList.toggle('expanded');
+		projExpanded = !projExpanded;
+		document.getElementById("projectDiv").classList.toggle('collapsed');
 	}
-	
-	
-	
-	
 </script>
