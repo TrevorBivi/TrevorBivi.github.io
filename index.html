@@ -30,10 +30,10 @@
 	overflow:hidden;
     transition:max-height 0.3s ease-out; 
 	background-color:#F0F0F0;
-	max-height:70px;
-}
-.projDiv.collapsed{
 	max-height:3px;
+}
+.projDiv.expanded{
+	max-height:70px;
 }
 .projTable{
 	width:80%;
@@ -96,7 +96,7 @@ a {
 						<a class="navButton" href="https://trevorbivi.github.io/index.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" >
 							Home
 						</a>
-						<a class="navButton" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
+						<a class="navButton" style="cursor:pointer;" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
 							Projects
 						</a>
 						<a class="navButton" href="https://trevorbivi.github.io/about.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
@@ -161,7 +161,7 @@ a {
 		<!--  main body -->
 
 			<font>
-				&emsp;Welcome to my site! I'm a nineteen-year old Software Engineering student who has 
+				&emsp;Welcome to my site! I'm a nineteen-year old Software Engineering student and have 
 				been interested in electronics and coding since I was a child.
 			</font>
 			<br>
@@ -180,14 +180,14 @@ a {
 	function primaryOut(x){x.style.color = "#000000";}
 	function primaryEnter(x){x.style.color = "#606060";}
 	
-	var projExpanded = true;
+	var projExpanded = false;
 	function toggleProj(x){
 		if(projExpanded){
 			document.getElementById("projButton").style.backgroundColor = "#FFFFFF";
 		}else{
-			document.getElementById("projButton").style.backgroundColor = "#EEEEEE";
+			document.getElementById("projButton").style.backgroundColor = "#F0F0F0";
 		}
 		projExpanded = !projExpanded;
-		document.getElementById("projectDiv").classList.toggle('collapsed');
+		document.getElementById("projectDiv").classList.toggle('expanded');
 	}
 </script>

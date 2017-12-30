@@ -30,10 +30,10 @@
 	overflow:hidden;
     transition:max-height 0.3s ease-out; 
 	background-color:#F0F0F0;
-	max-height:70px;
-}
-.projDiv.collapsed{
 	max-height:3px;
+}
+.projDiv.expanded{
+	max-height:70px;
 }
 .projTable{
 	width:80%;
@@ -96,7 +96,7 @@ a {
 						<a class="navButton" href="https://trevorbivi.github.io/index.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" >
 							Home
 						</a>
-						<a class="navButton" href="https://trevorbivi.github.io/tetris_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
+						<a class="navButton" style="cursor:pointer;" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
 							Projects
 						</a>
 						<a class="navButton" href="https://trevorbivi.github.io/about.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
@@ -112,6 +112,7 @@ a {
 				</tr>			
 			</table>
 		</div>
+		
 		
 		<div class="projDiv" id="projectDiv">
 			<table class="projTable">
@@ -161,12 +162,12 @@ a {
 		<div style="margin:25px; margin-top:5px;">
 		<!--  main body -->
 		
-			<font size="+2" color="#6b92ff" style = "text-align:center;">My Education</font>
+			<font size="+2" color="#6b92ff" style = "text-align:center;">Education</font>
 			<br>
-			<font>I'm a second-year Software Engineering student at Carleton University and was among the top 15% of my class for first year. I have learned a lot about programming both through school and hobby projects.</font>
+			<font>I'm a second-year Software Engineering student at Carleton University and was among the top 15% of my class first year. I have learned a lot about programming both through school and hobby projects.</font>
 			<br><br>
 			
-			<font size="+2" color="#6b92ff" style = "text-align:center;">My Intrests</font>
+			<font size="+2" color="#6b92ff" style = "text-align:center;">Interests</font>
 			<br>
 			<font>Here are some areas of programming that especially interest me...</font>
 			<ul type="disc"  style="margin:0px;">
@@ -178,7 +179,7 @@ a {
 			</ul>
 			<br>
 			
-			<font size="+2" color="#6b92ff" style = "text-align:center;">Programming Languages I've Used</font>
+			<font size="+2" color="#6b92ff" style = "text-align:center;">Programming Languages</font>
 			<br>
 			<font>Here are the programming languages I've learned a lot about...</font>
 			<ul type="disc" style="margin:0px;">
@@ -204,14 +205,14 @@ a {
 	function primaryOut(x){x.style.color = "#000000";}
 	function primaryEnter(x){x.style.color = "#606060";}
 	
-	var projExpanded = true;
+	var projExpanded = false;
 	function toggleProj(x){
 		if(projExpanded){
 			document.getElementById("projButton").style.backgroundColor = "#FFFFFF";
 		}else{
-			document.getElementById("projButton").style.backgroundColor = "#EEEEEE";
+			document.getElementById("projButton").style.backgroundColor = "#F0F0F0";
 		}
 		projExpanded = !projExpanded;
-		document.getElementById("projectDiv").classList.toggle('collapsed');
+		document.getElementById("projectDiv").classList.toggle('expanded');
 	}
 </script>

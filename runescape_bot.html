@@ -96,7 +96,7 @@ a {
 						<a class="navButton" href="https://trevorbivi.github.io/index.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" >
 							Home
 						</a>
-						<a class="navButton" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
+						<a class="navButton" style="cursor:pointer;background-color:#F0F0F0;" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
 							Projects
 						</a>
 						<a class="navButton" href="https://trevorbivi.github.io/about.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
@@ -177,7 +177,7 @@ a {
 				the game and interact with it. Some key examples are...
 			</font>
 			<ul type="disc" style="margin:0px;">
-				<li>Realistic mouse and key inputs</li>
+				<li>Realistic mouse movements and key presses</li>
 				<li>Travel to game coordinates</li>
 				<li>Click somewhere relative to a key image</li>
 				<li>Find position of text string in game</li>
@@ -189,7 +189,7 @@ a {
 					<img src="https://trevorbivi.github.io/runescape_bot.jpg" height="250">
 				</a>
 				<br>
-				<font color="777777"><i>An example bot making bowstrings</i></font>
+				<font color="777777"><i>A bot I made with the API making bowstrings</i></font>
 			</div>
 			<br>
 			
@@ -232,7 +232,7 @@ a {
 		if(projExpanded){
 			document.getElementById("projButton").style.backgroundColor = "#FFFFFF";
 		}else{
-			document.getElementById("projButton").style.backgroundColor = "#EEEEEE";
+			document.getElementById("projButton").style.backgroundColor = "#F0F0F0";
 		}
 		projExpanded = !projExpanded;
 		document.getElementById("projectDiv").classList.toggle('collapsed');
