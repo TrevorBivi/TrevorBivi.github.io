@@ -1,108 +1,30 @@
 <!DOCTYPE html>
 
-<style>
-
-.mainDiv{
-	background-color:#FFFFFF;
-	min-width:800px;
-	max-width:1025px;
-	width:60%;
-	margin:auto;
-	box-shadow:7px 7px 14px grey;
-	
-	font-family: Calibri, sans-serif;
-}
-.mainHead{
-	padding: 5px;
-	padding-left:20px;
-	padding-bottom:0px;
-	font-family: Calibri, sans-serif;
-	
-}
-.devDate{
-	position:absolute;
-	top:5px;
-	right:25px;
-}
-.projDiv{
-	margin-left:25px;
-	margin-right:25px;
-	overflow:hidden;
-    transition:max-height 0.3s ease-out; 
-	background-color:#F0F0F0;
-	max-height:70px;
-}
-.projDiv.collapsed{
-	max-height:3px;
-}
-.projTable{
-	width:80%;
-	margin:auto;
-	text-align:center;
-}
-.projButton{
-	-webkit-touch-callout: none; /* iOS Safari */
-	-webkit-user-select: none; /* Safari */
-	-khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-	user-select: none; 
-	display: inline-block;
-	padding:0px;
-	padding-left:15px;
-	padding-right:15px;
-	font-family: Calibri, sans-serif;
-	color:"#000000";
-}
-
-
-.navButton{
-	-webkit-touch-callout: none; /* iOS Safari */
-	-webkit-user-select: none; /* Safari */
-	-khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-	user-select: none; 
-
-	display: inline-block;
-	padding:0px;
-	padding-left:15px;
-	padding-right:15px;
-	font-family: Calibri, sans-serif;
-	color:"#000000";
-	text-decoration: none;
-}
-a {
-  color:black;
-  text-decoration: none; /* no underline */
-}
-</style>
-
-
-
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
 
 <html>
 <body bgcolor="#EEEEEE">
 	<div class="mainDiv">		
-	
-		<div class="mainHead">
-			<font style="font-size:40px;">Trevor Bivi</font><br>
+	<div class="mainHead">
+		<font style="font-size:40px;">Trevor Bivi</font><br>
 			<table style="font-size:20px; width:100%;">
 				<tr>
 					<td>
 						<font color="#777777">Software Engineering Student</font>
 					</td>
 					<td align=right>
-						<a class="navButton" href="https://trevorbivi.github.io/index.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" >
+						<a class="navButton" href="index.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" >
 							Home
 						</a>
 						<a class="navButton" style="cursor:pointer;background-color:#F0F0F0;" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
 							Projects
 						</a>
-						<a class="navButton" href="https://trevorbivi.github.io/about.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+						<a class="navButton" href="about.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							About
 						</a>
-						<a class="navButton" href="https://trevorbivi.github.io/contact.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+						<a class="navButton" href="contact.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							Contact
 						</a>
 						<a class="navButton"  href="https://github.com/TrevorBivi" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
@@ -117,34 +39,34 @@ a {
 			<table class="projTable">
 				<tr>
 					<td style="width:33%">
-						<a class="navButton" href="https://trevorbivi.github.io/runescape_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+						<a class="navButton" href="runescape_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							RuneScape Bot API
 						</a>
 					</td>
 					<td style="width:33%">
-						<a class="navButton" href="https://trevorbivi.github.io/garden_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+						<a class="navButton" href="garden_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							Garden Watering System
 						</a>
 					</td>
 					<td style="width:33%">
-						<a class="navButton" href="https://trevorbivi.github.io/tetris_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+						<a class="navButton" href="tetris_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							Tetris Bot
 						</a>
 					</td>
 				</tr>
 				<tr>
 				    <td>
-						<a class="navButton" href="https://trevorbivi.github.io/steam_market_analyser.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+						<a class="navButton" href="steam_market_analyser.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							Steam Market Analyser
 						</a>
 					</td>
 					<td>
-						<a class="navButton" href="https://trevorbivi.github.io/computer_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+						<a class="navButton" href="computer_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							3D Computer Game
 						</a>
 					</td>
 					<td>
-						<a class="navButton" href="https://trevorbivi.github.io/phone_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+						<a class="navButton" href="phone_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							Phone Game
 						</a>
 					</td>
@@ -152,23 +74,22 @@ a {
 			</table>
 		</div>
 		
-		
 		<!--  title -->
 		<div align="center" style="position:relative;">
 			<div class="devDate">July 2014</div>
 			<font size="+3" color="#6b92ff" >Phone Game</font><br>
 		</div>
 		
-		<div style="margin:25px; margin-top:5px;">
+		<div style="margin:25px; margin-top:-5px;">
 		<!-- main body -->
 			
-			<img src="https://trevorbivi.github.io/code.jpg" height="20" style="margin-leftt:1px; margin-right:1px;">
+			<img src="code.jpg" height="20" style="margin-leftt:1px; margin-right:1px;">
 			<font size="+2" color="#6b92ff">Language used</font>
 			<br>
 			<font>&emsp;ActionScript 3.0 was used.</font>
 			<br><br>
 		
-			<img src="https://trevorbivi.github.io/question_mark.jpg" height="20" style="margin-left:8px;margin-right:8px;">
+			<img src="question_mark.jpg" height="20" style="margin-left:8px;margin-right:8px;">
 			<font size="+2" color="#6b92ff" >What it is</font>
 			<br>
 			<font>
@@ -178,7 +99,7 @@ a {
 			<br><br>
 			
 			<div align="center">
-				<embed src="https://trevorbivi.github.io/math_monster_computer_port.swf" width="683" height="400">
+				<embed src="math_monster_computer_port.swf" width="683" height="400">
 				<br>
 				<font color="777777"><i>
 					The game. An unlock all levels option and keyboard controls have been added.<br>
@@ -189,7 +110,7 @@ a {
 			</div>
 			<br>
 			
-			<img src="https://trevorbivi.github.io/gear.jpg" height="20"  style="margin-left5px;margin-right:6px;">
+			<img src="gear.jpg" height="20"  style="margin-left5px;margin-right:6px;">
 			<font size="+2" color="#6b92ff" >My Role</font>
 			<br>
 			<font>
