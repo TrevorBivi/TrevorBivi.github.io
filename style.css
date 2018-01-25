@@ -27,7 +27,7 @@
 	overflow:hidden;
     transition:max-height 0.3s ease-out; 
 	background-color:#F0F0F0;
-	max-height:70px;
+	max-height:150px;
 }
 .projDiv.collapsed{
 	max-height:3px;
@@ -41,7 +41,7 @@
 	max-height:3px;
 }
 .projDiv2.expanded{
-	max-height:70px;
+	max-height:150px;
 }
 .projTable{
 	width:80%;
