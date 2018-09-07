@@ -6,8 +6,9 @@
 
 <html>
 <body bgcolor="#EEEEEE">
-	<div class="mainDiv">		
-	<div class="mainHead">
+	<div class="mainDiv">
+
+		<div class="mainHead">
 		<font style="font-size:40px;">Trevor Bivi</font><br>
 			<table style="font-size:20px; width:100%;">
 				<tr>
@@ -21,23 +22,28 @@
 						<a class="navButton" style="cursor:pointer;background-color:#F0F0F0;" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
 							Projects
 						</a>
+						<a class="navButton" href="work_experience.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Work Experience
+						</a>
 						<a class="navButton" href="about.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							About
-						</a>
-						<a class="navButton" href="contact.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Contact
 						</a>
 						<a class="navButton"  href="https://github.com/TrevorBivi" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							GitHub
 						</a>
 					</td>
-				</tr>			
+				</tr>
 			</table>
 		</div>
-		
+
 		<div class="projDiv" id="projectDiv">
 			<table class="projTable">
 				<tr>
+					<td style="width:33%">
+						<a class="navButton" href="minecraft_tools.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Minecraft Tools
+						</a>
+					</td>
 					<td style="width:33%">
 						<a class="navButton" href="runescape_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							RuneScape Bot API
@@ -48,14 +54,14 @@
 							Garden Watering System
 						</a>
 					</td>
+				</tr>
+				<tr>
 					<td style="width:33%">
 						<a class="navButton" href="tetris_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							Tetris Bot
 						</a>
 					</td>
-				</tr>
-				<tr>
-				    <td>
+					<td>
 						<a class="navButton" href="steam_market_analyser.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							Steam Market Analyser
 						</a>
@@ -65,39 +71,52 @@
 							3D Computer Game
 						</a>
 					</td>
+				</tr>
+				<tr>
 					<td>
 						<a class="navButton" href="phone_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							Phone Game
 						</a>
 					</td>
-				</tr>				
+					<td>
+						<a class="navButton" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+
+						</a>
+					</td>
+					<td>
+						<a class="navButton" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+
+						</a>
+					</td>
+				</tr>
 			</table>
 		</div>
-		
+
+
 		<!--  title -->
 		<div align="center" style="position:relative;">
 			<div class="devDate">July 2014</div>
 			<font size="+3" color="#6b92ff" >Phone Game</font><br>
 		</div>
-		
+
 		<div style="margin:25px; margin-top:-5px;">
 		<!-- main body -->
-			
+
 			<img src="code.jpg" height="20" style="margin-leftt:1px; margin-right:1px;">
 			<font size="+2" color="#6b92ff">Language used</font>
 			<br>
 			<font>&emsp;ActionScript 3.0 was used.</font>
 			<br><br>
-		
+
 			<img src="question_mark.jpg" height="20" style="margin-left:8px;margin-right:8px;">
 			<font size="+2" color="#6b92ff" >What it is</font>
 			<br>
 			<font>
-				&emsp;This is an educational Super Mario style phone app I lead the development of as part 
+				&emsp;This is an educational Super Mario style phone app I lead the development of as part
 				of a group of three. We were tasked with developing a game for a group of third grade children.
-			</font>					
+			</font>
 			<br><br>
-			
+
 			<div align="center">
 				<embed src="math_monster_computer_port.swf" width="683" height="400">
 				<br>
@@ -109,22 +128,22 @@
 				</i></font>
 			</div>
 			<br>
-			
+
 			<img src="gear.jpg" height="20"  style="margin-left5px;margin-right:6px;">
 			<font size="+2" color="#6b92ff" >My Role</font>
 			<br>
 			<font>
-				&emsp;I was mainly responsible for the creation of a collision engine, special interactive objects 
-				like springs and moving platforms as well as a cookie based save system to remember the unlocked 
-				levels. I was the only one in the group who had already used ActionScript 3.0 on my own outside 
+				&emsp;I was mainly responsible for the creation of a collision engine, special interactive objects
+				like springs and moving platforms as well as a cookie based save system to remember the unlocked
+				levels. I was the only one in the group who had already used ActionScript 3.0 on my own outside
 				of school, so I also helped teach my partners and reviewed their code.
 			</font>
 			<br><br>
-			
+
 		<!--   -->
 		</div>
 		<br>
-		
+
 	</div>
 </body>
 </html>
@@ -132,7 +151,7 @@
 <script>
 	function primaryOut(x){x.style.color = "#000000";}
 	function primaryEnter(x){x.style.color = "#606060";}
-	
+
 	var projExpanded = true;
 	function toggleProj(x){
 		if(projExpanded){

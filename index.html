@@ -6,9 +6,9 @@
 
 <html>
 <body bgcolor="#EEEEEE">
-	<div class="mainDiv">		
-	
-		<div class="mainHead">
+	<div class="mainDiv">
+
+			<div class="mainHead">
 			<font style="font-size:40px;">Trevor Bivi</font><br>
 			<table style="font-size:20px; width:100%;">
 				<tr>
@@ -22,23 +22,28 @@
 						<a class="navButton" style="cursor:pointer;" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
 							Projects
 						</a>
+						<a class="navButton" href="work_experience.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Work Experience
+						</a>
 						<a class="navButton" href="about.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							About
-						</a>
-						<a class="navButton" href="contact.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Contact
 						</a>
 						<a class="navButton"  href="https://github.com/TrevorBivi" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							GitHub
 						</a>
 					</td>
-				</tr>			
+				</tr>
 			</table>
 		</div>
-		
+
 		<div class="projDiv2" id="projectDiv">
-			<table class="projTable">
+      <table class="projTable">
 				<tr>
+					<td style="width:33%">
+						<a class="navButton" href="minecraft_tools.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Minecraft Tools
+						</a>
+					</td>
 					<td style="width:33%">
 						<a class="navButton" href="runescape_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							RuneScape Bot API
@@ -49,14 +54,14 @@
 							Garden Watering System
 						</a>
 					</td>
+				</tr>
+				<tr>
 					<td style="width:33%">
 						<a class="navButton" href="tetris_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							Tetris Bot
 						</a>
 					</td>
-				</tr>
-				<tr>
-				    <td>
+					<td>
 						<a class="navButton" href="steam_market_analyser.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							Steam Market Analyser
 						</a>
@@ -66,34 +71,48 @@
 							3D Computer Game
 						</a>
 					</td>
+				</tr>
+				<tr>
 					<td>
 						<a class="navButton" href="phone_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
 							Phone Game
 						</a>
 					</td>
-				</tr>				
+					<td>
+						<a class="navButton" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+
+						</a>
+					</td>
+					<td>
+						<a class="navButton" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+
+						</a>
+					</td>
+				</tr>
 			</table>
 		</div>
-		
+
+
+
 		<!--  title -->
 		<div align="center">
 			<font size="+3" color="#6b92ff" >Welcome</font><br>
 		</div>
-		
+
 		<div style="margin:25px; margin-top:-5px;">
 		<!--  main body -->
-			
+
 			<font>
-				&emsp;Welcome to my site! I'm a Software Engineering student who has been 
-				interested in electronics and coding since I was a child. I created this 
-				site to help give a better understanding the projects I've worked on 
+				&emsp;Welcome to my site! I'm a Software Engineering student who has been
+				interested in electronics and coding since I was a child. I created this
+				site to help give a better understanding the projects I've worked on
 				and my professional qualifications.
 			</font>
 			<br>
 
 		<!-- end of main body  -->
 		</div>
-		
+
 		<br>
 	</div>
 
@@ -104,7 +123,7 @@
 <script>
 	function primaryOut(x){x.style.color = "#000000";}
 	function primaryEnter(x){x.style.color = "#606060";}
-	
+
 	var projExpanded = false;
 	function toggleProj(x){
 		if(projExpanded){
