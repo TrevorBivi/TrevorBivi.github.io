@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<html>
+<body bgcolor="#EEEEEE">
+	<div class="mainDiv">
+
+		<div class="mainHead">
+		<font style="font-size:40px;">Trevor Bivi</font><br>
+			<table style="font-size:20px; width:100%;">
+				<tr>
+					<td>
+						<font color="#777777">Software Engineering Student</font>
+					</td>
+					<td align=right>
+						<a class="navButton" href="index.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" >
+							Home
+						</a>
+						<a class="navButton" style="cursor:pointer;background-color:#F0F0F0;" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
+							Projects
+						</a>
+						<a class="navButton" href="work_experience.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Work Experience
+						</a>
+						<a class="navButton" href="about.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							About
+						</a>
+						<a class="navButton"  href="https://github.com/TrevorBivi" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							GitHub
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="projDiv" id="projectDiv">
+			<table class="projTable">
+				<tr>
+					<td style="width:33%">
+						<a class="navButton" href="minecraft_tools.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Minecraft Tools
+						</a>
+					</td>
+					<td style="width:33%">
+						<a class="navButton" href="runescape_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							RuneScape Bot API
+						</a>
+					</td>
+					<td style="width:33%">
+						<a class="navButton" href="garden_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Garden Watering System
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:33%">
+						<a class="navButton" href="tetris_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Tetris Bot
+						</a>
+					</td>
+					<td>
+						<a class="navButton" href="steam_market_analyser.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Steam Market Analyser
+						</a>
+					</td>
+					<td>
+						<a class="navButton" href="computer_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							3D Computer Game
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="navButton" href="phone_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Phone Game
+						</a>
+					</td>
+					<td>
+						<a class="navButton" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+
+						</a>
+					</td>
+					<td>
+						<a class="navButton" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+
+		<!--  title -->
+		<div align="center" style="position:relative;">
+			<div class="devDate">Jan 2017 - May 2017</div>
+			<font size="+3" color="#6b92ff" >Minecraft Tools</font><br>
+		</div>
+
+		<div style="margin:25px; margin-top:-5px;">
+		<!-- main body -->
+
+			<img src="code.jpg" height="20" style="margin-leftt:1px; margin-right:1px;">
+			<font size="+2" color="#6b92ff">Language used</font>
+			<br>
+			<font>&emsp;This project was programmed in Python 3. Many popular libraries were used, such as OpenCV, numpy, zlib and the win32 collection.</font>
+			<br><br>
+
+			<img src="question_mark.jpg" height="20" style="margin-left:8px;margin-right:8px;">
+			<font size="+2" color="#6b92ff" >What it is</font>
+			<br>
+			<font>
+				&emsp;This is a collection of Python modules that provide ways to automate a variety of Minecraft actions. The main functionality is listed below...
+			</font>
+      <br><br>
+      <font size="+1" color="#6b92ff" >Bot API</font><br>
+      <font>
+			&emsp;The file read_memory.py uses the win32 library to read the Minecraft process memory. This module is also used by another module, player_action.py, which contains a variety of functions for completing actions such as...
+      </font>
+      <ul type="disc"  style="margin:0px;">
+        <li>Reading the player’s game coordinates and rotation from process memory</li>
+        <li>Pressing keyboard keys and mouse buttons – even when window is in the background</li>
+        <li>Rotating player</li>
+        <li>Walking to specified coordinate</li>
+        <li>Looking at a specified coordinate</li>
+        <li>Verifying the player is looking at a specified block</li>
+      </ul>
+      <br>
+      <font size="+1" color="#6b92ff" >"HD" Art Bot</font><br>
+      <font>
+      &emsp;board_builder.py uses the bot API for the creation of massive in game images designed to be viewed on maps. Any image up to the size of 512x512 pixels can be created in game with the help of board_generator.py. This module contains an algorithm for creating best representation of an in game image using blocks of the users preference. The user can also choose if they want the additional color detail added by tethering and exploiting elevation shading.
+      </font>
+      <br>
+      <div align="center">
+				<a href="https://raw.githubusercontent.com/TrevorBivi/minecraft-tools/master/example%20board.jpg">
+					<img src="https://raw.githubusercontent.com/TrevorBivi/minecraft-tools/master/example%20board.jpg" height="325">
+				</a>
+				<br>
+				<font color="777777"><i>A sample image created using the HD art bot</i></font>
+			</div>
+      <br><br>
+
+      <font size="+1" color="#6b92ff" >World Save Reader</font><br>
+      <font>
+      &emsp;read_save_file.py is able to parse the region file format and read block information. This can be useful to useful to use with the bot API.
+      </font>
+      <br><br>
+      <font size="+1" color="#6b92ff" >Desirable World Finder</font><br>
+      <font>
+      &emsp;Generate_worlds.py uses player_actions.py and read_save_file.py t automatically makes worlds and searches them for desired traits. Example code has already been written to search for oceans, villages, mineshafts, mob spawners and jungle biomes. It is possible to generate a bird’s eye view image of the entire generated world to help speed up final inspection of worlds that are automatically found.
+      </font>
+      <br><br>
+
+			<img src="wrench.jpg" height="20"  style="margin-left:6px;margin-right:6px;">
+			<font size="+2" color="#6b92ff" >Future Plans</font>
+			<br>
+			<font>
+				&emsp;Read_memory.py needs to have base memory pointers recalculated be work with 1.13. Also, read_save_file.py is not perfectly able to parse the block states of the new 1.13 chunk format yet. I would also like to improve the bird’s eye view feature, add elevation shading and icons to represent where specified desired traits are located.
+			</font>
+			<br><br>
+
+			<div align="center">
+				<a href="mc_biv.jpg">
+					<img src="mc_biv.jpg" height="250">
+				</a>
+				<br>
+				<font color="777777"><i>A small section of a bird's eye view image. Work in progress!</i></font>
+			</div>
+		<!--   -->
+		</div>
+
+		<br>
+
+	</div>
+</body>
+</html>
+
+<script>
+	function primaryOut(x){x.style.color = "#000000";}
+	function primaryEnter(x){x.style.color = "#606060";}
+
+	var projExpanded = true;
+	function toggleProj(x){
+		if(projExpanded){
+			document.getElementById("projButton").style.backgroundColor = "#FFFFFF";
+		}else{
+			document.getElementById("projButton").style.backgroundColor = "#EEEEEE";
+		}
+		projExpanded = !projExpanded;
+		document.getElementById("projectDiv").classList.toggle('collapsed');
+	}
+</script>
