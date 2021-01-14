@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<html>
+<body bgcolor="#EEEEEE">
+	<div class="mainDiv">
+
+		<div class="mainHead">
+		<font style="font-size:40px;">Trevor Bivi</font><br>
+			<table style="font-size:20px; width:100%;">
+				<tr>
+					<td>
+						<font color="#777777">Software Engineering Student</font>
+					</td>
+					<td align=right>
+						<a class="navButton" href="index.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" >
+							Home
+						</a>
+						<a class="navButton" style="cursor:pointer;background-color:#F0F0F0;" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
+							Projects
+						</a>
+						<a class="navButton" href="work_experience.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Work Experience
+						</a>
+						<a class="navButton" href="about.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							About
+						</a>
+						<a class="navButton"  href="https://github.com/TrevorBivi" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							GitHub
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="projDiv" id="projectDiv">
+			<table class="projTable">
+				<tr>
+                    <td style="width:33%">
+                        <a class="navButton" href="sound_mixer.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+                            Sound Mixer
+                        </a>
+                    </td>
+					<td style="width:33%">
+						<a class="navButton" href="minecraft_tools.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Minecraft Tools
+						</a>
+					</td>
+					<td style="width:33%">
+						<a class="navButton" href="runescape_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							RuneScape Bot API
+						</a>
+					</td>
+
+				</tr>
+				<tr>
+                    <td style="width:33%">
+                        <a class="navButton" href="garden_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+                            Garden Watering System
+                        </a>
+                    </td>
+					<td style="width:33%">
+						<a class="navButton" href="tetris_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Tetris Bot
+						</a>
+					</td>
+					<td>
+						<a class="navButton" href="steam_market_analyser.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Steam Market Analyser
+						</a>
+					</td>
+
+				</tr>
+				<tr>
+                    <td>
+                        <a class="navButton" href="computer_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+                            3D Computer Game
+                        </a>
+                    </td>
+					<td>
+						<a class="navButton" href="phone_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+							Phone Game
+						</a>
+					</td>
+					<td>
+						<a class="navButton" href="other_projects.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+                            Other Projects
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<!--  title -->
+		<div align="center" style="position:relative;">
+			<div class="devDate">May 2018 - August 2018</div>
+			<font size="+3" color="#6b92ff" >Sound Mixer</font><br>
+		</div>
+
+		<div style="margin:25px; margin-top:-5px;">
+		<!-- main body -->
+
+			<img src="code.jpg" height="20" style="margin-leftt:1px; margin-right:1px;">
+			<font size="+2" color="#6b92ff">Language used</font>
+			<br>
+			<font>&emsp;Python, C and batch were used. This code uses popular libraries such as Numpy and win32.</font>
+			<br><br>
+
+			<img src="question_mark.jpg" height="20" style="margin-left:8px;margin-right:8px;">
+			<font size="+2" color="#6b92ff" >What it is</font>
+			<br>
+			<font>
+				&emsp;This is a custom program for playing audio files and mic audio, as well as applying sound effects to individual audio tracks. The goal was to create a custom program that could be used in virtual reality, so a custom controller was built to provide the user with additional buttons that could be easily worked while not able to see. A wireless remote is also supported that has less functionality. The program also provides playback to the user and uses text to speech software to narrate the users actions to ensure that they are aware if they misclick a button and can take corrective action.
+			</font>
+			<br>
+
+			<div align="center">
+				<a href="audio_mixer.jpg">
+					<img src="audio_mixer.jpg" height="250">
+                </a>
+                <a href="IR_Remote.jpg">
+					<img src="IR_Remote.jpg" height="250">
+                </a>
+				<br>
+				<font color="777777"><i>Pictures of each of the controllers</i></font>
+			</div>
+			<br>
+
+			<img src="gear.jpg" height="20"  style="margin-left5px;margin-right:6px;">
+			<font size="+2" color="#6b92ff" >How it works</font>
+			<br>
+			<font>
+				&emsp;A wired controller was built using an arduino that communicates to a python program on the user's computer over USB. The IR remote works by communicating to another arduino equipped with an IR sensor. One of the major capabilities of the program is being able to independently shift the speed and pitch of an audio channel. This was achieved using Numpy and fourier transforms to apply signal processing. There is a very powerful voice modifier program I have used in the past and I did not want to loose the functionality it provides, however it is closed source. In order to include the functionality of this program, I used reverse engineering tools to determine how memory values that store the state of the program could be automatically found and read. I then used the win32 api to read the state of these memory values and send artifical user input to the program to control the state. More Python code was used to forward and combine audio from various artifial audio devices. All of this processing can be very intensive and needs to be done with minimal latency, so heavy use of multiprocessing and multithreading was used. Pipes and queues were used for transfering data between threads and processes.
+			<font>
+			<br><br>
+
+			<img src="wrench.jpg" height="20"  style="margin-left:6px;margin-right:6px;">
+			<font size="+2" color="#6b92ff" >Potential improvements</font>
+			<br>
+			<font>
+				&emsp;I am quite pleased with this project as it has provided functionality that I have not seen anyone else use in VR. However, having a second wire the user needs to worry about while in VR to get the most functionality can be bothersome and the IR wireless remote won't work reliably if it is pointed more than ~80 degrees from the receiver. Using something like wireless RS232 modules it would be possible to have the wired controller communicate to the computer wirelessly instead, no matter where it's pointing. Running the arduino off of battery power instead of usb would require no extra electronics but a battery holder.
+			</font>
+			<br>
+
+		<!--   -->
+		</div>
+		<br>
+
+	</div>
+</body>
+</html>
+
+<script>
+	function primaryOut(x){x.style.color = "#000000";}
+	function primaryEnter(x){x.style.color = "#606060";}
+
+	var projExpanded = true;
+	function toggleProj(x){
+		if(projExpanded){
+			document.getElementById("projButton").style.backgroundColor = "#FFFFFF";
+		}else{
+			document.getElementById("projButton").style.backgroundColor = "#F0F0F0";
+		}
+		projExpanded = !projExpanded;
+		document.getElementById("projectDiv").classList.toggle('collapsed');
+	}
+</script>

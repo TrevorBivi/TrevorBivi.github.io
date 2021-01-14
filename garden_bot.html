@@ -1,177 +1,276 @@
 <!DOCTYPE html>
 
 <head>
-	<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <html>
-<body bgcolor="#EEEEEE">
-	<div class="mainDiv">
+  <body bgcolor="#EEEEEE">
+    <div class="mainDiv">
+      <div class="mainHead">
+        <font style="font-size:40px;">Trevor Bivi</font><br />
+        <table style="font-size:20px; width:100%;">
+          <tr>
+            <td>
+              <font color="#777777">Software Engineering Student</font>
+            </td>
+            <td align="right">
+              <a
+                class="navButton"
+                href="index.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Home
+              </a>
+              <a
+                class="navButton"
+                style="cursor:pointer;background-color:#F0F0F0;"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+                onclick="toggleProj()"
+                id="projButton"
+                style="background-color:#FFFFFF;"
+              >
+                Projects
+              </a>
+              <a
+                class="navButton"
+                href="work_experience.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Work Experience
+              </a>
+              <a
+                class="navButton"
+                href="about.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                About
+              </a>
+              <a
+                class="navButton"
+                href="https://github.com/TrevorBivi"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                GitHub
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
 
-		<div class="mainHead">
-		<font style="font-size:40px;">Trevor Bivi</font><br>
-			<table style="font-size:20px; width:100%;">
-				<tr>
-					<td>
-						<font color="#777777">Software Engineering Student</font>
-					</td>
-					<td align=right>
-						<a class="navButton" href="index.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" >
-							Home
-						</a>
-						<a class="navButton" style="cursor:pointer;background-color:#F0F0F0;" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
-							Projects
-						</a>
-						<a class="navButton" href="work_experience.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Work Experience
-						</a>
-						<a class="navButton" href="about.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							About
-						</a>
-						<a class="navButton"  href="https://github.com/TrevorBivi" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							GitHub
-						</a>
-					</td>
-				</tr>
-			</table>
-		</div>
+      <div class="projDiv" id="projectDiv">
+        <table class="projTable">
+          <tr>
+            <td style="width:33%">
+              <a
+                class="navButton"
+                href="sound_mixer.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Sound Mixer
+              </a>
+            </td>
+            <td style="width:33%">
+              <a
+                class="navButton"
+                href="minecraft_tools.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Minecraft Tools
+              </a>
+            </td>
+            <td style="width:33%">
+              <a
+                class="navButton"
+                href="runescape_bot.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                RuneScape Bot API
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td style="width:33%">
+              <a
+                class="navButton"
+                href="garden_bot.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Garden Watering System
+              </a>
+            </td>
+            <td style="width:33%">
+              <a
+                class="navButton"
+                href="tetris_bot.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Tetris Bot
+              </a>
+            </td>
+            <td>
+              <a
+                class="navButton"
+                href="steam_market_analyser.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Steam Market Analyser
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                class="navButton"
+                href="computer_game.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                3D Computer Game
+              </a>
+            </td>
+            <td>
+              <a
+                class="navButton"
+                href="phone_game.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Phone Game
+              </a>
+            </td>
+            <td>
+              <a
+                class="navButton"
+                href="other_projects.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Other Projects
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
 
-		<div class="projDiv" id="projectDiv">
-			<table class="projTable">
-				<tr>
-					<td style="width:33%">
-						<a class="navButton" href="minecraft_tools.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Minecraft Tools
-						</a>
-					</td>
-					<td style="width:33%">
-						<a class="navButton" href="runescape_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							RuneScape Bot API
-						</a>
-					</td>
-					<td style="width:33%">
-						<a class="navButton" href="garden_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Garden Watering System
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td style="width:33%">
-						<a class="navButton" href="tetris_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Tetris Bot
-						</a>
-					</td>
-					<td>
-						<a class="navButton" href="steam_market_analyser.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Steam Market Analyser
-						</a>
-					</td>
-					<td>
-						<a class="navButton" href="computer_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							3D Computer Game
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<a class="navButton" href="phone_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Phone Game
-						</a>
-					</td>
-					<td>
-						<a class="navButton" href="other_projects.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-              Other Projects
-						</a>
-					</td>
-					<td>
-						<a class="navButton" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+      <!--  title -->
+      <div align="center" style="position:relative;">
+        <div class="devDate">Aug 2017 - Sept 2017</div>
+        <font size="+3" color="#6b92ff">Garden Watering System</font><br />
+      </div>
 
-						</a>
-					</td>
-				</tr>
-			</table>
-		</div>
+      <div style="margin:25px; margin-top:-5px;">
+        <!-- main body -->
 
-		<!--  title -->
-		<div align="center" style="position:relative;">
-			<div class="devDate">Aug 2017 - Sept 2017</div>
-			<font size="+3" color="#6b92ff" >Garden Watering System</font><br>
-		</div>
+        <img
+          src="code.jpg"
+          height="20"
+          style="margin-leftt:1px; margin-right:1px;"
+        />
+        <font size="+2" color="#6b92ff">Language used</font>
+        <br />
+        <font>&emsp;C was used.</font>
+        <br /><br />
 
-		<div style="margin:25px; margin-top:-5px;">
-		<!-- main body -->
+        <img
+          src="question_mark.jpg"
+          height="20"
+          style="margin-left:8px;margin-right:8px;"
+        />
+        <font size="+2" color="#6b92ff">What it is</font>
+        <br />
+        <font>
+          &emsp;This is a garden watering system that uses an Arduino Uno
+          microcontroller to economically decide when to water. Rain barrels are
+          used as the primary water source to further decrease garden costs. The
+          microcontroller also hosts a local site to conveniently display
+          information to users.
+        </font>
+        <br /><br />
 
-			<img src="code.jpg" height="20" style="margin-leftt:1px; margin-right:1px;">
-			<font size="+2" color="#6b92ff">Language used</font>
-			<br>
-			<font>&emsp;C was used.</font>
-			<br><br>
+        <img
+          src="gear.jpg"
+          height="20"
+          style="margin-left5px;margin-right:6px;"
+        />
+        <font size="+2" color="#6b92ff">How it works</font>
+        <br />
+        <font>
+          &emsp;An ethernet LAN network module allows the Arduino to use http
+          requests to periodically get the current time and weather forecast
+          data. The Arduino also measures soil moisture using resistive water
+          sensors. Once a day, this weather and soil moisture data is used to
+          decide which garden sections should be watered. To water a garden
+          section, it's designated solenoid valve is opened for some time using
+          a relay allowing water from the rain barrels to flow through a drip
+          irrigation system. If the water in the rain barrels is detected to be
+          too low with an ultrasonic sensor, they will first be filled with hose
+          water using another electric valve. To host the site, an http response
+          containing the site information is sent to any incoming http requests.
+        </font>
+        <br /><br />
 
-			<img src="question_mark.jpg" height="20" style="margin-left:8px;margin-right:8px;">
-			<font size="+2" color="#6b92ff" >What it is</font>
-			<br>
-			<font>
-				&emsp;This is a garden watering system that uses an Arduino Uno microcontroller to economically decide
-				when to water. Rain barrels are used as the primary water source to further decrease garden costs.
-				The microcontroller also hosts a local site to conveniently display information to users.
-			</font>
-			<br><br>
+        <img
+          src="wrench.jpg"
+          height="20"
+          style="margin-left:6px;margin-right:6px;"
+        />
+        <font size="+2" color="#6b92ff">Future work</font>
+        <br />
+        <font>
+          &emsp;While the software is complete, I still need to finish building
+          a final version of the physical system once it warms up outside. Also,
+          the site is more simplistic than I would like because of the small
+          amount of RAM Arduinos have. I could fix this by creating a JavaScript
+          web browser add-on to better format the site.
+        </font>
+        <br /><br />
 
-			<img src="gear.jpg" height="20"  style="margin-left5px;margin-right:6px;">
-			<font size="+2" color="#6b92ff" >How it works</font>
-			<br>
-			<font>
-				&emsp;An ethernet LAN network module allows the Arduino to use http requests to periodically get the
-				current time and weather forecast data. The Arduino also measures soil moisture using resistive
-				water sensors. Once a day, this weather and soil moisture data is used to decide which garden
-				sections should be watered. To water a garden section, it's designated solenoid valve is opened
-				for some time using a relay allowing water from the rain barrels to flow through a drip irrigation
-				system. If the water in the rain barrels is detected to be too low with an ultrasonic sensor, they
-				will first be filled with hose water using another electric valve. To host the site, an http response
-				containing the site information is sent to any incoming http requests.
-			</font>
-			<br><br>
+        <div align="center">
+          <a href="garden_bot_parts.jpg">
+            <img src="garden_bot_parts.jpg" align="center" height="250" /><br />
+          </a>
+          <font color="777777"
+            ><i>The current state of the physical system</i></font
+          >
+        </div>
+        <br />
 
-			<img src="wrench.jpg" height="20"  style="margin-left:6px;margin-right:6px;">
-			<font size="+2" color="#6b92ff" >Future work</font>
-			<br>
-			<font>
-				&emsp;While the software is complete, I still need to finish building a final version of the physical
-				system once it warms up outside. Also, the site is more simplistic than I would like because of the
-				small amount of RAM Arduinos have. I could fix this by creating a JavaScript web browser add-on to
-				better format the site.
-			</font>
-			<br><br>
+        <!--   -->
+      </div>
 
-			<div align="center">
-				<a href="garden_bot_parts.jpg">
-					<img src="garden_bot_parts.jpg" align="center" height="250"><br>
-				</a>
-				<font color="777777"><i>The current state of the physical system</i></font>
-			</div>
-			<br>
-
-		<!--   -->
-		</div>
-
-		<br>
-	</div>
-
-</body>
+      <br />
+    </div>
+  </body>
 </html>
 
 <script>
-	function primaryOut(x){x.style.color = "#000000";}
-	function primaryEnter(x){x.style.color = "#606060";}
+  function primaryOut(x) {
+    x.style.color = "#000000";
+  }
+  function primaryEnter(x) {
+    x.style.color = "#606060";
+  }
 
-	var projExpanded = true;
-	function toggleProj(x){
-		if(projExpanded){
-			document.getElementById("projButton").style.backgroundColor = "#FFFFFF";
-		}else{
-			document.getElementById("projButton").style.backgroundColor = "#EEEEEE";
-		}
-		projExpanded = !projExpanded;
-		document.getElementById("projectDiv").classList.toggle('collapsed');
-	}
+  var projExpanded = true;
+  function toggleProj(x) {
+    if (projExpanded) {
+      document.getElementById("projButton").style.backgroundColor = "#FFFFFF";
+    } else {
+      document.getElementById("projButton").style.backgroundColor = "#EEEEEE";
+    }
+    projExpanded = !projExpanded;
+    document.getElementById("projectDiv").classList.toggle("collapsed");
+  }
 </script>

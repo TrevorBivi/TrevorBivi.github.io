@@ -1,188 +1,300 @@
 <!DOCTYPE html>
 
 <head>
-	<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <html>
-<body bgcolor="#EEEEEE">
-	<div class="mainDiv">
+  <body bgcolor="#EEEEEE">
+    <div class="mainDiv">
+      <div class="mainHead">
+        <font style="font-size:40px;">Trevor Bivi</font><br />
+        <table style="font-size:20px; width:100%;">
+          <tr>
+            <td>
+              <font color="#777777">Software Engineering Student</font>
+            </td>
+            <td align="right">
+              <a
+                class="navButton"
+                href="index.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Home
+              </a>
+              <a
+                class="navButton"
+                style="cursor:pointer;background-color:#F0F0F0;"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+                onclick="toggleProj()"
+                id="projButton"
+                style="background-color:#FFFFFF;"
+              >
+                Projects
+              </a>
+              <a
+                class="navButton"
+                href="work_experience.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Work Experience
+              </a>
+              <a
+                class="navButton"
+                href="about.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                About
+              </a>
+              <a
+                class="navButton"
+                href="https://github.com/TrevorBivi"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                GitHub
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
 
-		<div class="mainHead">
-		<font style="font-size:40px;">Trevor Bivi</font><br>
-			<table style="font-size:20px; width:100%;">
-				<tr>
-					<td>
-						<font color="#777777">Software Engineering Student</font>
-					</td>
-					<td align=right>
-						<a class="navButton" href="index.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" >
-							Home
-						</a>
-						<a class="navButton" style="cursor:pointer;background-color:#F0F0F0;" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)" onclick="toggleProj()" id="projButton" style="background-color:#FFFFFF;">
-							Projects
-						</a>
-						<a class="navButton" href="work_experience.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Work Experience
-						</a>
-						<a class="navButton" href="about.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							About
-						</a>
-						<a class="navButton"  href="https://github.com/TrevorBivi" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							GitHub
-						</a>
-					</td>
-				</tr>
-			</table>
-		</div>
+      <div class="projDiv" id="projectDiv">
+        <table class="projTable">
+          <tr>
+            <td style="width:33%">
+              <a
+                class="navButton"
+                href="sound_mixer.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Sound Mixer
+              </a>
+            </td>
+            <td style="width:33%">
+              <a
+                class="navButton"
+                href="minecraft_tools.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Minecraft Tools
+              </a>
+            </td>
+            <td style="width:33%">
+              <a
+                class="navButton"
+                href="runescape_bot.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                RuneScape Bot API
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td style="width:33%">
+              <a
+                class="navButton"
+                href="garden_bot.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Garden Watering System
+              </a>
+            </td>
+            <td style="width:33%">
+              <a
+                class="navButton"
+                href="tetris_bot.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Tetris Bot
+              </a>
+            </td>
+            <td>
+              <a
+                class="navButton"
+                href="steam_market_analyser.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Steam Market Analyser
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                class="navButton"
+                href="computer_game.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                3D Computer Game
+              </a>
+            </td>
+            <td>
+              <a
+                class="navButton"
+                href="phone_game.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Phone Game
+              </a>
+            </td>
+            <td>
+              <a
+                class="navButton"
+                href="other_projects.html"
+                onmouseover="primaryEnter(this)"
+                onmouseout="primaryOut(this)"
+              >
+                Other Projects
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
 
-		<div class="projDiv" id="projectDiv">
-			<table class="projTable">
-				<tr>
-					<td style="width:33%">
-						<a class="navButton" href="minecraft_tools.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Minecraft Tools
-						</a>
-					</td>
-					<td style="width:33%">
-						<a class="navButton" href="runescape_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							RuneScape Bot API
-						</a>
-					</td>
-					<td style="width:33%">
-						<a class="navButton" href="garden_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Garden Watering System
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td style="width:33%">
-						<a class="navButton" href="tetris_bot.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Tetris Bot
-						</a>
-					</td>
-					<td>
-						<a class="navButton" href="steam_market_analyser.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Steam Market Analyser
-						</a>
-					</td>
-					<td>
-						<a class="navButton" href="computer_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							3D Computer Game
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<a class="navButton" href="phone_game.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-							Phone Game
-						</a>
-					</td>
-					<td>
-						<a class="navButton" href="other_projects.html" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
-              Other Projects
-						</a>
-					</td>
-					<td>
-						<a class="navButton" onmouseover="primaryEnter(this)" onmouseout="primaryOut(this)">
+      <!--  title -->
+      <div align="center" style="position:relative;">
+        <div class="devDate">Jan 2017 - May 2017</div>
+        <font size="+3" color="#6b92ff">3D Computer Game</font><br />
+      </div>
 
-						</a>
-					</td>
-				</tr>
-			</table>
-		</div>
+      <div style="margin:25px; margin-top:-5px;">
+        <!-- main body -->
 
+        <img
+          src="code.jpg"
+          height="20"
+          style="margin-leftt:1px; margin-right:1px;"
+        />
+        <font size="+2" color="#6b92ff">Language used</font>
+        <br />
+        <font>&emsp;C# was used.</font>
+        <br /><br />
 
-		<!--  title -->
-		<div align="center" style="position:relative;">
-			<div class="devDate">Jan 2017 - May 2017</div>
-			<font size="+3" color="#6b92ff" >3D Computer Game</font><br>
-		</div>
+        <img
+          src="question_mark.jpg"
+          height="20"
+          style="margin-left:8px;margin-right:8px;"
+        />
+        <font size="+2" color="#6b92ff">What it is</font>
+        <br />
+        <font>
+          &emsp;This is a first-person shooter game created with the Unity 3D
+          engine. Players shoot an endless hoard of zombies that run, jump and
+          climb to get to them. I first created a single player version then
+          re-wrote most of it to work with multiplayer. Here are some of the
+          features I've created...
+        </font>
+        <ul type="disc" style="margin:0px;">
+          <li>A node based path finding algorithm</li>
+          <li>Ability to sever enemies' limbs</li>
+          <li>Helicopter AI that shoots visible enemies</li>
+        </ul>
+        <br />
 
-		<div style="margin:25px; margin-top:-5px;">
-		<!-- main body -->
+        <div align="center">
+          <iframe
+            height="250"
+            src="https://www.youtube.com/embed/sgIh9mzClrs"
+            frameborder="0"
+            gesture="media"
+            allow="encrypted-media"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            height="250"
+            src="https://www.youtube.com/embed/FXEk0Sdp1s8"
+            frameborder="0"
+            gesture="media"
+            allow="encrypted-media"
+            allowfullscreen
+          ></iframe>
+          <br />
+          <font color="777777"><i>Sample gameplay</i></font>
+        </div>
+        <br />
 
-			<img src="code.jpg" height="20" style="margin-leftt:1px; margin-right:1px;">
-			<font size="+2" color="#6b92ff">Language used</font>
-			<br>
-			<font>&emsp;C# was used.</font>
-			<br><br>
+        <img
+          src="gear.jpg"
+          height="20"
+          style="margin-left5px;margin-right:6px;"
+        />
+        <font size="+2" color="#6b92ff">How it works</font>
+        <br />
+        <font>
+          &emsp;This project made extensive use of object oriented programming
+          and recursive functions. A recursive node based pathfinding algorithm
+          close to Dijkstra's algorithm is used for determining the best paths
+          in between all nodes so enemy objects can reach players anywhere.
+          Furthermore, recursive functions are used to determine where enemies
+          were hit when they are shot and to spawn a ragdoll object with bones
+          in the right position when enemies die.
+        </font>
+        <br /><br />
 
-			<img src="question_mark.jpg" height="20" style="margin-left:8px;margin-right:8px;">
-			<font size="+2" color="#6b92ff" >What it is</font>
-			<br>
-			<font>
-				&emsp;This is a first-person shooter game created with the Unity 3D engine.
-				Players shoot an endless hoard of zombies that run, jump and climb to get
-				to them. I first created a single player version then re-wrote most of it to
-				work with multiplayer. Here are some of the features I've created...
-			</font>
-			<ul type="disc"  style="margin:0px;">
-				<li>A node based path finding algorithm</li>
-				<li>Ability to sever enemies' limbs</li>
-				<li>Helicopter AI that shoots visible enemies</li>
-			</ul>
-			<br>
+        <img
+          src="wrench.jpg"
+          height="20"
+          style="margin-left:6px;margin-right:6px;"
+        />
+        <font size="+2" color="#6b92ff">Future Plans</font>
+        <br />
+        <font>
+          &emsp;I want to use the knowledge I have gained from this project to
+          make a more advanced and original game. I have already bought an Xbox
+          360 Kinect that has many useful features to aid with modelling and
+          animating.
+        </font>
+        <br /><br />
 
-			<div align="center">
-				<iframe height="250" src="https://www.youtube.com/embed/sgIh9mzClrs" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-				<iframe height="250" src="https://www.youtube.com/embed/FXEk0Sdp1s8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-				<br>
-				<font color="777777"><i>Sample gameplay</i></font>
-			</div>
-			<br>
+        <div align="center">
+          <a href="game_model.jpg">
+            <img src="game_model.jpg" height="250" />
+          </a>
+          <br />
+          <font color="777777"
+            ><i
+              >A new model I made in Blender with the help of Kinect 3D
+              scanning</i
+            ></font
+          >
+        </div>
+        <!--   -->
+      </div>
 
-			<img src="gear.jpg" height="20"  style="margin-left5px;margin-right:6px;">
-			<font size="+2" color="#6b92ff" >How it works</font>
-			<br>
-			<font>
-				&emsp;This project made extensive use of object oriented programming and recursive
-				functions. A recursive node based pathfinding algorithm close to
-				Dijkstra's algorithm is used for determining the best paths in between all nodes so
-				enemy objects can reach players anywhere. Furthermore, recursive functions are used to
-				determine where enemies were hit when they are shot and to spawn a ragdoll object with
-				bones in the right position when enemies die.
-			</font>
-			<br><br>
-
-			<img src="wrench.jpg" height="20"  style="margin-left:6px;margin-right:6px;">
-			<font size="+2" color="#6b92ff" >Future Plans</font>
-			<br>
-			<font>
-				&emsp;I want to use the knowledge I have gained from this project to make a more
-				advanced and original game. I have already bought an Xbox 360 Kinect that has many
-				useful features to aid with modelling and animating.
-			</font>
-			<br><br>
-
-			<div align="center">
-				<a href="game_model.jpg">
-					<img src="game_model.jpg" height="250">
-				</a>
-				<br>
-				<font color="777777"><i>A new model I made in Blender with the help of Kinect 3D scanning</i></font>
-			</div>
-		<!--   -->
-		</div>
-
-		<br>
-
-	</div>
-</body>
+      <br />
+    </div>
+  </body>
 </html>
 
 <script>
-	function primaryOut(x){x.style.color = "#000000";}
-	function primaryEnter(x){x.style.color = "#606060";}
+  function primaryOut(x) {
+    x.style.color = "#000000";
+  }
+  function primaryEnter(x) {
+    x.style.color = "#606060";
+  }
 
-	var projExpanded = true;
-	function toggleProj(x){
-		if(projExpanded){
-			document.getElementById("projButton").style.backgroundColor = "#FFFFFF";
-		}else{
-			document.getElementById("projButton").style.backgroundColor = "#EEEEEE";
-		}
-		projExpanded = !projExpanded;
-		document.getElementById("projectDiv").classList.toggle('collapsed');
-	}
+  var projExpanded = true;
+  function toggleProj(x) {
+    if (projExpanded) {
+      document.getElementById("projButton").style.backgroundColor = "#FFFFFF";
+    } else {
+      document.getElementById("projButton").style.backgroundColor = "#EEEEEE";
+    }
+    projExpanded = !projExpanded;
+    document.getElementById("projectDiv").classList.toggle("collapsed");
+  }
 </script>
